@@ -48,7 +48,7 @@ gulp.task('js-library-mover', function() { // move library js files.
 });
 
 gulp.task('fonts-mover', function() { // move fonts
-    return gulp.src('src/assets/fonts/*.+(otf|ttf)') // get the otf & ttf files from src
+    return gulp.src('src/assets/fonts/*.+(otf|ttf|ttc)') // get the otf & ttf files from src
         .pipe(gulp.dest('dist/assets/fonts'))
 });
 
