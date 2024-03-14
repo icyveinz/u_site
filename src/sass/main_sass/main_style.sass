@@ -1,4 +1,4 @@
-@import "../passive_sass/fonts_colors"
+@import "../passive_sass/fonts_colors", "../passive_sass/margins", "../passive_sass/mixins"
 
 html body
   margin: 0
@@ -12,6 +12,8 @@ body
 
 .full-width-container
   width: 100%
+  display: flex
+  justify-content: center
   &__black
     width: 100%
     background-color: black
@@ -80,12 +82,7 @@ body
   width: 100%
   left: 0
 
-.margin-bottom
-  &__1
-    margin-bottom: 1%
-
-
-.right-angled-picture-poster-grid
+.picture-poster-grid
   display: grid
   grid-template-columns: repeat(9, 1fr)
   grid-template-rows: repeat(4, 1fr)
@@ -98,3 +95,53 @@ body
   &__img
     width: 100%
     height: auto
+
+.left-poster-holder-container
+  display: flex
+  grid-column: 1 / 5
+  grid-row: 1 / 5
+  &__img
+    width: 100%
+    height: auto
+
+.left-angled-text-holder-grid
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  justify-content: flex-end
+  grid-column: 1 / 6
+  grid-row: 1 / 5
+
+.right-angled-text-holder-grid
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: flex-end
+  grid-column: 5 / 10
+  grid-row: 1 / 5
+
+.text-poster-type
+  &__new
+    @include poster-text
+    font-size: 15vw
+  &__exp
+    @include poster-text
+    font-size: 25vw
+  &__in
+    @include poster-text
+    font-size: 13vw
+  &__your
+    @include poster-text
+    font-size: 13vw
+  &__style
+    @include poster-text
+    font-size: 20vw
+
+.announce-section-grid
+  display: grid
+  grid-template-columns: repeat(9, 1fr)
+  grid-template-rows: repeat(1, 1fr)
+  width: 100%
+
+.text-announce-type
+  grid-column: 2 / 5
