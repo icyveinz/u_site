@@ -1,4 +1,4 @@
-@import "../passive_sass/fonts_colors", "../passive_sass/margins", "../passive_sass/mixins"
+@import "../passive_sass/fonts_colors", "../passive_sass/margins", "../passive_sass/mixins", "../passive_sass/underline_animation"
 
 html body
   margin: 0
@@ -58,67 +58,40 @@ body
     align-items: center
     justify-content: center
 
-.interactive-link
-  text-decoration: none
-  font-family: 'phosphate'
-  font-size: 1.4vw
-  color: $main_white
-  position: relative
-  padding-bottom: 4%
-
-.interactive-link:after
-  background: none repeat scroll 0 0 transparent
-  bottom: 0
-  content: ""
-  display: block
-  height: 2px
-  left: 50%
-  position: absolute
-  background: #fff
-  transition: width 0.3s ease 0s, left 0.3s ease 0s
-  width: 0
-
-.interactive-link:hover:after
-  width: 100%
-  left: 0
-
 .picture-poster-grid
   display: grid
   grid-template-columns: repeat(9, 1fr)
   grid-template-rows: repeat(4, 1fr)
   width: 100%
 
-.right-poster-holder-container
-  display: flex
-  grid-column: 6 / 10
-  grid-row: 1 / 5
-  &__img
-    width: 100%
-    height: auto
+.full-size-image
+  @include full-width-image
 
-.left-poster-holder-container
-  display: flex
-  grid-column: 1 / 5
-  grid-row: 1 / 5
-  &__img
-    width: 100%
-    height: auto
+.poster-holder-container
+  &__right
+    display: flex
+    grid-column: 6 / 10
+    grid-row: 1 / 5
+  &__left
+    display: flex
+    grid-column: 1 / 5
+    grid-row: 1 / 5
 
-.left-angled-text-holder-grid
-  display: flex
-  flex-direction: column
-  align-items: flex-end
-  justify-content: flex-end
-  grid-column: 1 / 6
-  grid-row: 1 / 5
-
-.right-angled-text-holder-grid
-  display: flex
-  flex-direction: column
-  align-items: flex-start
-  justify-content: flex-end
-  grid-column: 5 / 10
-  grid-row: 1 / 5
+.angled-text-holder-grid
+  &__left
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    justify-content: flex-end
+    grid-column: 1 / 6
+    grid-row: 1 / 5
+  &__right
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-end
+    grid-column: 5 / 10
+    grid-row: 1 / 5
 
 .text-poster-type
   &__new
@@ -144,4 +117,52 @@ body
   width: 100%
 
 .text-announce-type
-  grid-column: 2 / 5
+  grid-column: 1 / 5
+  font-size: 10vw
+  @include section-text
+
+.products-grid-layout
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-template-rows: repeat(auto-fill, 1fr)
+
+.single-product-grid-layout
+  display: grid
+  grid-template-columns: repeat(11, 1fr)
+  grid-template-rows: repeat(3, 1fr)
+  &__presentation
+    display: flex
+    grid-column: 2 / 5
+    grid-row: 1 / 4
+  &__colored-naming
+    display: flex
+    align-items: center
+    grid-column: 6 / 10
+  &__num-brackets
+    display: flex
+    grid-column: 11 / 12
+  &__vert-align
+    display: flex
+    grid-column: 6 / 13
+    grid-row: 2 / 5
+    flex-direction: column
+    align-items: flex-start
+
+.ugo-naming
+  &__yellow
+    color: $ugo_yellow_name
+    font-size: 2.7vw
+    font-family: bebas
+
+
+.decorative-brackets
+  &__inactive
+    color: $main_black
+    font-size: 2.7vw
+    font-family: bebas
+
+.description-row
+  &__inactive
+    color: $main_black
+    font-size: 1.8vw
+    font-family: typewriter
