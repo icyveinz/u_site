@@ -130,6 +130,7 @@ body
   display: grid
   grid-template-columns: repeat(11, 1fr)
   grid-template-rows: repeat(3, 1fr)
+  border: 1px solid $main_black
   &__presentation
     display: flex
     grid-column: 2 / 5
@@ -140,6 +141,7 @@ body
     grid-column: 6 / 10
   &__num-brackets
     display: flex
+    align-items: center
     grid-column: 11 / 12
   &__vert-align
     display: flex
@@ -151,8 +153,7 @@ body
 .ugo-naming
   &__yellow
     color: $ugo_yellow_name
-    font-size: 2.7vw
-    font-family: bebas
+    @include ugo-colored-naming
 
 
 .decorative-brackets
@@ -164,5 +165,5 @@ body
 .description-row
   &__inactive
     color: $main_black
-    font-size: 1.8vw
+    font-size: 1.55vw
     font-family: typewriter
