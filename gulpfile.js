@@ -33,8 +33,12 @@ gulp.task('html-minimizer', function() { // minimize the html files
         .pipe(gulp.dest('dist'))
 });
 
-gulp.task('animation-plugin-mover', function() { // move the animate.css library inside the dist.
-    return gulp.src("src/css/animate.css").pipe(gulp.dest('dist/css'))
+// gulp.task('animation-plugin-mover', function() { // move the animate.css library inside the dist.
+//     return gulp.src("src/css/animate.css").pipe(gulp.dest('dist/css'))
+// })
+
+gulp.task('plugins-mover', function() { // Move all CSS plugins to the dist.
+    return gulp.src("src/css/*.css").pipe(gulp.dest('dist/css'))
 })
 
 gulp.task('scripts-mover', function() { // move js files.
@@ -65,5 +69,5 @@ gulp.task('images-mover', function() { // move images
 
 
 gulp.task('default', gulp.parallel('serve', 'styles', 'checker',
-    'html-minimizer', 'animation-plugin-mover', 'scripts-mover', 'js-library-mover',
+    'html-minimizer', 'plugins-mover', 'scripts-mover', 'js-library-mover',
     'fonts-mover', 'icons-mover', 'images-mover')); // MAIN LAUNCHER OF TASKS.

@@ -42,9 +42,16 @@ class CardBuilder {
 }
 
 $(function() {
-    console.log('it works');
     const collected = new CardBuilder();
     collected.release_vector().forEach(function(object) {
         $('.products-grid-layout').append(object)
+    });
+
+    $('.products-grid-layout').on('mouseenter', '.single-product-grid-layout', function() {
+        console.log('hover');
+    });
+
+    $('.products-grid-layout').on('mouseleave', '.single-product-grid-layout', function() {
+        console.log('unhovered');
     });
 })

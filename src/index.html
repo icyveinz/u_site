@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>UGO Bar</title>
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/main_sass/main_style.css">
+
     <script src="js/js_library/jquery-3.7.1.min.js"></script>
+    <script src="js/js_library/aos.js"></script>
+    <script src="js/js_library/wow.min.js"></script>
+
+    <script src="js/js_scripts/visual_activators.js"></script>
     <script src="js/js_scripts/main_styler.js"></script>
 </head>
 <body>
@@ -29,12 +35,12 @@
         <div class="margin-bottom__1"></div>
     </div>
 </div>
-<div class="full-width-container">
+<div class="full-width-container" data-aos="fade-right" data-aos-duration="1500">
     <div class="sized-layout-container">
         <div class="margin-top__3"></div>
         <div class="picture-poster-grid">
             <div class="poster-holder-container__right">
-                <img class="full-size-image" src="assets/images/ugo_layout_green.svg" alt="">
+                <img class="full-size-image wow animate__animated animate__rotateInDownRight animate__delay-1s" src="assets/images/ugo_layout_green.svg" alt="">
             </div>
             <div class="angled-text-holder-grid__left">
                 <span class="text-poster-type__new">новый</span>
@@ -43,12 +49,12 @@
         </div>
     </div>
 </div>
-<div class="full-width-container">
+<div class="full-width-container" data-aos="fade-left" data-aos-duration="1500">
     <div class="sized-layout-container">
         <div class="margin-top__3"></div>
         <div class="picture-poster-grid">
             <div class="poster-holder-container__left">
-                <img class="full-size-image" src="assets/images/ugo_logo_green.svg" alt="">
+                <img class="full-size-image wow animate__animated animate__rotateInDownLeft animate__delay-1s" src="assets/images/ugo_logo_green.svg" alt="">
             </div>
             <div class="angled-text-holder-grid__right">
                 <span class="text-poster-type__in">в</span>
@@ -66,7 +72,10 @@
         </div>
     </div>
 </div>
-<div class="full-width-container">
+<div data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="1500"
+     class="full-width-container">
     <div class="products-grid-layout">
 
     </div>
