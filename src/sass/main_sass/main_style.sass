@@ -66,6 +66,7 @@ body
 
 .full-size-image
   @include full-width-image
+  transition: all 1s ease-in-out
 
 .poster-holder-container
   &__right
@@ -133,10 +134,10 @@ body
   grid-template-columns: repeat(26, 1fr)
   grid-template-rows: repeat(3, 1fr)
   border: 1px solid $main_black
-  transition: all .3s ease-in-out
+  transition: all .4s ease-in-out
   &__presentation
     display: flex
-    grid-column: 4 / 9
+    grid-column: 3 / 9
     grid-row: 1 / 4
     transition: all .3s ease-in-out
   &__colored-naming

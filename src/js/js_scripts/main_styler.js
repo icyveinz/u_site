@@ -41,6 +41,21 @@ class CardBuilder {
     }
 }
 
+function opposite_photo_src(photo_case, source) {
+    switch (photo_case) {
+        case "reversed":
+            const reversed_name = source.split('/')[2].split('.svg')[0] + '%202.svg';
+            const reversed_url = 'assets/images/' + reversed_name;
+            console.log(reversed_url);
+            return reversed_url
+        case "original":
+            const original_name = source.split('/')[2].split('%202')[0];
+            const original_url = 'assets/images/' + original_name + '.svg';
+            console.log(original_url);
+            return original_url
+    }
+}
+
 function release_animated_text(index) {
     const animation = "animate__fadeInRight"
     switch (index) {
@@ -57,13 +72,36 @@ function release_animated_text(index) {
     }
 }
 
+function ugo_black_exclusion(source_value) {
+    if (source_value === 'assets/images/ugo_black%20copy.svg' || source_value === 'assets/images/ugo_black%20copy%202.svg') {
+        return true
+    }
+    return false
+}
+
 function track_hovers() {
     $('.products-grid-layout').on('mouseenter', '.single-product-grid-layout', function() {
         console.log('hover');
+        $(this).css("background-color", "black");
+        const to_replace = opposite_photo_src("reversed", $(this).find('.full-size-image').attr('src'));
+        $(this).find('.full-size-image').attr('src', to_replace);
+        if (ugo_black_exclusion($(this).find('.full-size-image').attr('src'))) {
+            $(this).find('.ugo-naming__black').css('color', 'white')
+        }
+        $(this).find('.decorative-brackets__inactive').css('color', 'white');
+        $(this).find('.single-product-grid-layout__vert-align').children().css('color', 'white');
     });
 
     $('.products-grid-layout').on('mouseleave', '.single-product-grid-layout', function() {
-        console.log('unhovered');
+        console.log('unhover');
+        $(this).css("background-color", "white");
+        const to_replace = opposite_photo_src("original", $(this).find('.full-size-image').attr('src'))
+        $(this).find('.full-size-image').attr('src', to_replace);
+        if (ugo_black_exclusion($(this).find('.full-size-image').attr('src'))) {
+            $(this).find('.ugo-naming__black').css('color', 'black')
+        }
+        $(this).find('.decorative-brackets__inactive').css('color', 'black');
+        $(this).find('.single-product-grid-layout__vert-align').children().css('color', 'black');
     });
 }
 
@@ -96,4 +134,5 @@ function track_slides() { // Track slides in the carousel
 $(function() {
     place_items();
     track_slides();
+    track_hovers();
 })
