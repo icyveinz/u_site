@@ -37,6 +37,9 @@ class CardBuilder {
             </div>
         </div>`);
         });
+        released.push(`<div class="single-product-grid-layout__blacked-out">
+            <div class="single-product-grid-layout__centered-soon-text">
+            <span class="coming-soon-text">скоро ↗</span></div></div>`);
         return released
     }
 }
@@ -83,8 +86,8 @@ function track_hovers() {
     $('.products-grid-layout').on('mouseenter', '.single-product-grid-layout', function() {
         console.log('hover');
         $(this).css("background-color", "black");
-        const to_replace = opposite_photo_src("reversed", $(this).find('.full-size-image').attr('src'));
-        $(this).find('.full-size-image').attr('src', to_replace);
+        // const to_replace = opposite_photo_src("reversed", $(this).find('.full-size-image').attr('src'));
+        // $(this).find('.full-size-image').attr('src', to_replace);
         if (ugo_black_exclusion($(this).find('.full-size-image').attr('src'))) {
             $(this).find('.ugo-naming__black').css('color', 'white')
         }
@@ -95,8 +98,8 @@ function track_hovers() {
     $('.products-grid-layout').on('mouseleave', '.single-product-grid-layout', function() {
         console.log('unhover');
         $(this).css("background-color", "white");
-        const to_replace = opposite_photo_src("original", $(this).find('.full-size-image').attr('src'))
-        $(this).find('.full-size-image').attr('src', to_replace);
+        // const to_replace = opposite_photo_src("original", $(this).find('.full-size-image').attr('src'))
+        // $(this).find('.full-size-image').attr('src', to_replace);
         if (ugo_black_exclusion($(this).find('.full-size-image').attr('src'))) {
             $(this).find('.ugo-naming__black').css('color', 'black')
         }

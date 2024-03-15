@@ -1,4 +1,4 @@
-@import "../passive_sass/fonts_colors", "../passive_sass/margins", "../passive_sass/mixins", "../passive_sass/underline_animation"
+@import "../passive_sass/fonts_colors", "../passive_sass/margins", "../passive_sass/mixins", "../passive_sass/underline_animation", "../passive_sass/up-navigator"
 
 html body
   margin: 0
@@ -135,6 +135,14 @@ body
   grid-template-rows: repeat(3, 1fr)
   border: 1px solid $main_black
   transition: all .4s ease-in-out
+  &__blacked-out
+    padding: 2% 0
+    display: grid
+    grid-template-columns: repeat(26, 1fr)
+    grid-template-rows: repeat(3, 1fr)
+    background-color: $main_black
+    border: 1px solid $main_black
+    transition: all .4s ease-in-out
   &__presentation
     display: flex
     grid-column: 3 / 9
@@ -157,6 +165,20 @@ body
     flex-direction: column
     align-items: flex-start
     transition: all .3s ease-in-out
+  &__centered-soon-text
+    display: flex
+    grid-column: 7 / 23
+    grid-row: 2 / 2
+    flex-direction: row
+    justify-content: center
+    align-items: center
+
+.coming-soon-text
+  @include disable-marking
+  line-height: 0.8
+  font-family: bebas
+  color: $main_white
+  font-size: 5vw
 
 .ugo-naming
   &__yellow
@@ -221,3 +243,30 @@ body
     color: $main_black
     font-size: 2vw
     font-family: anonymous
+
+@media (max-width: 750px)
+  .single-product-grid-layout__blacked-out
+    display: none
+  .products-grid-layout
+    grid-template-columns: repeat(1, 1fr)
+  .ugo-naming
+    &__yellow
+      @include ugo-colored-naming-mobile
+    &__green
+      @include ugo-colored-naming-mobile
+    &__black
+      @include ugo-colored-naming-mobile
+    &__pink
+      @include ugo-colored-naming-mobile
+    &__blue
+      @include ugo-colored-naming-mobile
+    &__red
+      @include ugo-colored-naming-mobile
+    &__violet
+      @include ugo-colored-naming-mobile
+  .decorative-brackets
+    &__inactive
+      font-size: 4vw
+  .description-row
+    &__inactive
+      font-size: 3vw
