@@ -4,6 +4,7 @@ const sass = require('gulp-sass')(require('sass')); // A plugin for working with
 const cleanCSS = require('gulp-clean-css'); // code compressor
 const htmlmin = require('gulp-htmlmin'); // import html minifier
 const imagemin = require('gulp-imagemin'); // import photo minifier STRICTLY USE : npm install gulp-imagemin@7.1.0 (IT ALLOWS TO REQUIRE IMPORT)
+const svgmin = require("gulp-svgmin") // svg files compressor
 
 gulp.task('serve', function() {
     browserSync.init({
@@ -58,6 +59,7 @@ gulp.task('fonts-mover', function() { // move fonts
 
 gulp.task('icons-mover', function() { // move icons
     return gulp.src('src/assets/icons/*.svg') // get the svg files from src
+        .pipe(svgmin())
         .pipe(gulp.dest('dist/assets/icons'))
 });
 
@@ -67,7 +69,13 @@ gulp.task('images-mover', function() { // move images
         .pipe(gulp.dest('dist/assets/images')) // move to the dist.
 });
 
+gulp.task('svg-mover-images', function() { // move and compress svg from images to dist
+    return gulp.src('src/assets/images/*.svg')
+        .pipe(svgmin())
+        .pipe(gulp.dest('dist/assets/images'))
+})
+
 
 gulp.task('default', gulp.parallel('serve', 'styles', 'checker',
     'html-minimizer', 'plugins-mover', 'scripts-mover', 'js-library-mover',
-    'fonts-mover', 'icons-mover', 'images-mover')); // MAIN LAUNCHER OF TASKS.
+    'fonts-mover', 'icons-mover', 'images-mover', 'svg-mover-images')); // MAIN LAUNCHER OF TASKS.

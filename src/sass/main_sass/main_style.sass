@@ -192,3 +192,31 @@ body
     color: $main_black
     font-size: 1.55vw
     font-family: anonymous
+
+.principles-grid-layout
+  display: grid
+  width: 100%
+  grid-template-columns: repeat(30, 1fr)
+  grid-template-rows: repeat(auto-fill, 1fr)
+  &__image-holder
+    display: flex
+    grid-column: 1 / 20
+  &__text-holder
+    display: flex
+    flex-direction: column
+    grid-column: 21 / 31
+    align-items: flex-start
+
+.card-holder
+  &__main-title
+    @include disable-marking
+    display: flex
+    color: $main_black
+    font-size: 7vw
+    font-family: bebas
+  &__comments
+    @include disable-marking
+    display: flex
+    color: $main_black
+    font-size: 2vw
+    font-family: anonymous
