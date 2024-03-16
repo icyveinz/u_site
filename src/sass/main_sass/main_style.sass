@@ -255,21 +255,56 @@ body
   width: 100%
   border-radius: 0 30px 30px 0
   display: grid
-  grid-column: 1 / 22
+  grid-column: 1 / 20
   grid-row: 1 / 6
   grid-template-columns: repeat(25, 1fr)
   grid-template-rows: repeat(25, 1fr)
   &__flex-vert
     grid-column: 3 / 25
-    grid-row: 4 / 12
+    grid-row: 2 / 12
     display: flex
     flex-direction: column
     align-items: flex-start
 
 .right-social-field-grid
   width: 100%
-  grid-column: 24 / 31
+  grid-column: 22 / 31
   grid-row: 1 / 6
+  display: grid
+  grid-template-columns: repeat(25, 1fr)
+  grid-template-rows: repeat(25, 1fr)
+
+.flex-container-starting-placement
+  grid-column: 2 / 25
+  grid-row: 2 / 12
+  display: flex
+  flex-direction: column
+
+.horizontal-flex-img-text-container
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  &__img
+    width: 10%
+  &__flex-vert
+    width: 80%
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+.right-side-container-text
+  &__action-bold
+    font-family: phosphate
+    font-size: 1.7vw
+    color: $main_black
+  &__comment-regular
+    font-family: anonymous
+    font-size: 1.3vw
+    color: $main_black
+  &__info-bold
+    font-family: anonymous
+    font-size: 1.5vw
+    color: $main_black
 
 .contacts
   &__big-title
@@ -279,33 +314,48 @@ body
     line-height: 1.2
   &__under-title
     font-family: anonymous
-    font-size: 2.2vw
+    font-size: 2vw
     color: $main_black
+  &__submit-text
+    font-family: bebas
+    font-size: 1.5vw
+    color: $main_white
+    line-height: 1
 
 .max-width
   width: 100%
 
-//.text-input-styler
-//  width: 100%
-//  padding: 12px 20px
-//  margin: 1%
-//  box-sizing: border-box
-//  border: 3px solid #ccc
-//  transition: 0.5s
-//  outline: none
+.label-input-styler
+  font-family: anonymous
+  color: black
+  font-size: 1.5vw
+
+::placeholder
+  color: black
+  opacity: 1
 
 .text-input-styler
+  background-color: #FFFFFF
   width: 100%
   padding: 5px 20px
   margin-top: 0.3%
   box-sizing: border-box
-  border: 3px solid #ccc
+  border: 3px solid #FFFFFF
   -webkit-transition: 0.5s
   transition: 0.5s
   outline: none
+  resize: none
 
 .text-input-styler:focus
-  border: 3px solid #555
+  border: 3px solid #000
+  background-color: $contacts-background
+
+.submit-request-button
+  width: 100%
+  padding: 1.1% 0
+  background-color: #101727
+  border-radius: 10px
+  border: none
 
 
 @media (max-width: 750px)
