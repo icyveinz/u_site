@@ -4,6 +4,10 @@ html body
   margin: 0
   padding: 0
 
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+  margin-top: 0
+  margin-bottom: 0
+
 html
   scroll-behavior: smooth
 
@@ -177,8 +181,12 @@ body
   @include disable-marking
   line-height: 0.8
   font-family: bebas
-  color: $main_white
+  color: $text_inactive
   font-size: 5vw
+  transition: .5s ease-in-out
+  &:hover
+    color: $main_white
+
 
 .ugo-naming
   &__yellow
@@ -214,7 +222,7 @@ body
   &__inactive
     color: $main_black
     font-size: 1.55vw
-    font-family: anonymous
+    font-family: bluecurve-light // If don't like change to Anonymous Pro
 
 .principles-grid-layout
   display: grid
@@ -242,13 +250,13 @@ body
     display: flex
     color: $main_black
     font-size: 2vw
-    font-family: anonymous
+    font-family: bluecurve-light
 
 .contacts-double-separated-grid
   display: grid
   width: 100%
   grid-template-columns: repeat(30, 1fr)
-  grid-template-rows: repeat(5, 1fr)
+  grid-template-rows: repeat(auto-fill, 1fr)
 
 .left-green-reach-me-field-grid
   background-color: $contacts-background
@@ -258,53 +266,14 @@ body
   grid-column: 1 / 20
   grid-row: 1 / 6
   grid-template-columns: repeat(25, 1fr)
-  grid-template-rows: repeat(25, 1fr)
+  grid-template-rows: repeat(auto-fill, 1fr)
   &__flex-vert
+    margin: 5% 0
     grid-column: 3 / 25
     grid-row: 2 / 12
     display: flex
     flex-direction: column
     align-items: flex-start
-
-.right-social-field-grid
-  width: 100%
-  grid-column: 22 / 31
-  grid-row: 1 / 6
-  display: grid
-  grid-template-columns: repeat(25, 1fr)
-  grid-template-rows: repeat(25, 1fr)
-
-.flex-container-starting-placement
-  grid-column: 2 / 25
-  grid-row: 2 / 12
-  display: flex
-  flex-direction: column
-
-.horizontal-flex-img-text-container
-  display: flex
-  flex-direction: row
-  justify-content: space-between
-  &__img
-    width: 10%
-  &__flex-vert
-    width: 80%
-    display: flex
-    flex-direction: column
-    align-items: flex-start
-
-.right-side-container-text
-  &__action-bold
-    font-family: phosphate
-    font-size: 1.7vw
-    color: $main_black
-  &__comment-regular
-    font-family: anonymous
-    font-size: 1.3vw
-    color: $main_black
-  &__info-bold
-    font-family: anonymous
-    font-size: 1.5vw
-    color: $main_black
 
 .contacts
   &__big-title
@@ -313,20 +282,19 @@ body
     color: $main_black
     line-height: 1.2
   &__under-title
-    font-family: anonymous
+    font-family: bluecurve-light
     font-size: 2vw
     color: $main_black
   &__submit-text
     font-family: bebas
     font-size: 1.5vw
     color: $main_white
-    line-height: 1
 
 .max-width
   width: 100%
 
 .label-input-styler
-  font-family: anonymous
+  font-family: bluecurve-light
   color: black
   font-size: 1.5vw
 
@@ -337,7 +305,7 @@ body
 .text-input-styler
   background-color: #FFFFFF
   width: 100%
-  padding: 5px 20px
+  padding: 5px 5px
   margin-top: 0.3%
   box-sizing: border-box
   border: 3px solid #FFFFFF
@@ -356,7 +324,74 @@ body
   background-color: #101727
   border-radius: 10px
   border: none
+  transition: 0.5s
 
+.submit-request-button:hover
+  border-radius: 40px
+
+.footer-content-grid
+  display: grid
+  width: 100%
+  background-color: $main_black
+  grid-template-columns: repeat(30, 1fr)
+  grid-template-rows: repeat(10, 1fr)
+
+.footer-grid-logo-holder
+  width: 70%
+  grid-column: 1 / 4
+  grid-row: 2 / 4
+
+.contact-content-holder
+  grid-column: 1 / 20
+  grid-row: 4 / 5
+  &__text
+    color: $main_white
+    font-size: 5vw
+    @include footer-big-text
+
+.go-top-href-holder
+  display: flex
+  justify-content: flex-end
+  grid-column: 21 / 31
+  grid-row: 4 / 5
+  &__text
+    color: $text_inactive
+    text-decoration: none
+    font-size: 5vw
+    transition: 0.5s
+    @include footer-big-text
+  &__text:hover
+    color: $main_white
+
+.additional-info-text-holder
+  display: flex
+  justify-content: space-between
+  align-items: center
+  grid-column: 1 / 31
+  grid-row: 5 / 6
+  &__text
+    color: $text_inactive
+    font-family: bluecurve-regular
+    font-size: 2vw
+
+.legal-content-holder-vertical-layout
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  grid-column: 1 / 31
+  grid-row: 6 / auto-fill
+  &__title
+    color: $main_white
+    font-size: 5vw
+    @include footer-big-text
+  &__shadowed
+    color: $text_inactive
+    font-family: bluecurve-regular
+    font-size: 2.5vw
+  &__minors
+    color: $main_white
+    font-size: 5vw
+    @include footer-big-text
 
 @media (max-width: 750px)
   .single-product-grid-layout__blacked-out
