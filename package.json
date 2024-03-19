@@ -19,5 +19,8 @@
     "gulp-sass": "^5.1.0",
     "gulp-svgmin": "^4.1.0",
     "sass": "^1.71.1"
+  },
+  "dependencies": {
+    "mozjpeg": "^8.0.0"
   }
 }

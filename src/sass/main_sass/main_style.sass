@@ -274,6 +274,31 @@ body
     display: flex
     flex-direction: column
     align-items: flex-start
+  &__flex-vert-overlay
+    margin: 2% -2%
+    border-radius: 20px
+    grid-column: 3 / 25
+    grid-row: 2 / 12
+    display: none
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background-color: rgba(0, 0, 0, 0.75)
+
+.notification_vertical_content
+  display: flex
+  width: 90%
+  flex-direction: column
+  align-items: flex-start
+  &__main
+    font-family: bebas
+    font-size: 4vw
+    color: $main_white
+  &__additional
+    font-family: bluecurve-light
+    font-size: 3vw
+    color: $main_white
+
 
 .contacts
   &__big-title

@@ -73,7 +73,7 @@ gulp.task('svg-mover-images', function() { // move and compress svg from images 
     return gulp.src('src/assets/images/*.svg')
         .pipe(svgmin())
         .pipe(gulp.dest('dist/assets/images'))
-})
+});
 
 
 gulp.task('default', gulp.parallel('serve', 'styles', 'checker',
