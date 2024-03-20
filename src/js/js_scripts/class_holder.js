@@ -39,7 +39,7 @@ class CardBuilder {
         });
         released.push(`<div class="single-product-grid-layout__blacked-out">
             <div class="single-product-grid-layout__centered-soon-text">
-            <span class="coming-soon-text">скоро ↗</span></div></div>`);
+            <span class="coming-soon-text">скоро⤴</span></div></div>`);
         return released
     }
 }
