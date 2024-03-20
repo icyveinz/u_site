@@ -65,6 +65,14 @@ body
   @include full-width-image
   transition: all 1s ease-in-out
 
+.menu-size-image
+  @include menu-burger-resized
+  transition: all 1s ease-in-out
+
+.poster-text-image
+  @include poster-resized-image
+  transition: all 1s ease-in-out
+
 .poster-holder-container
   &__right
     display: flex
@@ -84,10 +92,6 @@ body
     grid-column: 1 / 6
     grid-row: 1 / 5
   &__right
-    display: flex
-    flex-direction: column
-    align-items: flex-start
-    justify-content: flex-end
     grid-column: 5 / 10
     grid-row: 1 / 5
 
@@ -304,6 +308,7 @@ body
     font-size: 2vw
     color: $main_black
   &__submit-text
+    padding-top: 1%
     font-family: bebas
     font-size: 1.5vw
     color: $main_white
@@ -337,6 +342,9 @@ body
   background-color: $contacts-background
 
 .submit-request-button
+  display: flex
+  justify-content: center
+  align-items: center
   width: 100%
   padding: 1.1% 0
   background-color: #101727
