@@ -5,19 +5,30 @@
 .logo-button-holder-container
   @include crossed-traits-menu
 
+.button-holder-href-container
+  @include crossed-traits-menu
+  margin-top: 0
+  background-color: rgba(0, 0, 0, 0.6)
+  display: flex
+  justify-content: center
+  &__a
+    font-size: 4vw
+    font-family: neopixel
+    color: $main_white
+    text-decoration: none
+
 .box-burger-mobile-container
   display: flex
   flex-direction: column
   align-items: flex-end
   justify-content: center
   grid-column: 8 / 8
-  &__segments
+  &__button
     display: flex
-    flex-direction: column
-    align-items: center
     justify-content: center
-    width: 45%
-    height: 100%
+    align-items: center
+    background-color: rgba(0, 0, 0, 0)
+    border: 0
 
 .main-menu-grid-container
   @include crossed-traits-menu

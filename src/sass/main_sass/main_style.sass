@@ -4,7 +4,7 @@ html body
   margin: 0
   padding: 0
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, span
   margin-top: 0
   margin-bottom: 0
 
@@ -412,6 +412,10 @@ body
     @include footer-big-text
 
 @media (max-width: 750px)
+  #top-page-mobile
+    display: flex
+  #top-page
+    display: none
   .single-product-grid-layout__blacked-out
     display: none
   .products-grid-layout
@@ -455,3 +459,9 @@ body
       color: $main_white
   .label-input-styler
     font-size: 3vw
+
+@media (min-width: 750px)
+  #top-page-mobile
+    display: none
+  #top-page
+    display: flex

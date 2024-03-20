@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="800px" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>new_exp_sample</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="new_exp_sample">
+            <rect id="Rectangle" x="0" y="0" width="800" height="800"></rect>
+            <text id="новый" font-family="BebasNeue-Bold, Bebas Neue" font-size="260" font-weight="bold" fill="#000000">
+                <tspan x="218" y="340">новый</tspan>
+            </text>
+            <text id="опыт" font-family="BebasNeue-Bold, Bebas Neue" font-size="450" font-weight="bold" fill="#000000">
+                <tspan x="4" y="687">опыт</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
