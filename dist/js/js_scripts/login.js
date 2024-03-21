@@ -14,6 +14,12 @@ $(function() {
             .then((json) => {
                 console.log(json);
                 console.log(json.reply, json.token);
+                if (json.reply === "Failed to login! Check your login & password") {
+                    // Do some action. display notification.
+                }
+                else {
+                    // redirect to page where orders could be accessed.
+                }
             })
     })
 })
