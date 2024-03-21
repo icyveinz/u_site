@@ -1,13 +1,13 @@
 function opposite_photo_src(photo_case, source) {
     switch (photo_case) {
         case "reversed":
-            const reversed_name = source.split('/')[2].split('.svg')[0] + '%202.svg';
+            const reversed_name = source.split('/')[2].split('.svg')[0] + '%202.webp';
             const reversed_url = 'assets/images/' + reversed_name;
             console.log(reversed_url);
             return reversed_url
         case "original":
             const original_name = source.split('/')[2].split('%202')[0];
-            const original_url = 'assets/images/' + original_name + '.svg';
+            const original_url = 'assets/images/' + original_name + '.webp';
             console.log(original_url);
             return original_url
     }
@@ -30,7 +30,7 @@ function release_animated_text(index) {
 }
 
 function ugo_black_exclusion(source_value) {
-    if (source_value === 'assets/images/ugo_black%20copy.svg' || source_value === 'assets/images/ugo_black%20copy%202.svg') {
+    if (source_value === 'assets/images/ugo_black%20copy.webp' || source_value === 'assets/images/ugo_black%20copy%202.webp') {
         return true
     }
     return false
