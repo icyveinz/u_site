@@ -69,6 +69,12 @@ gulp.task('images-mover', function() { // move images
         .pipe(gulp.dest('dist/assets/images')) // move to the dist.
 });
 
+gulp.task('meta-mover', function() { // Move the meta picture to the dist
+    return gulp.src('src/assets/meta/*.png')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/assets/meta'))
+})
+
 gulp.task('svg-mover-images', function() { // move and compress svg from images to dist
     return gulp.src('src/assets/images/*.svg')
         .pipe(svgmin())
@@ -78,4 +84,4 @@ gulp.task('svg-mover-images', function() { // move and compress svg from images 
 
 gulp.task('default', gulp.parallel('serve', 'styles', 'checker',
     'html-minimizer', 'plugins-mover', 'scripts-mover', 'js-library-mover',
-    'fonts-mover', 'icons-mover', 'images-mover', 'svg-mover-images')); // MAIN LAUNCHER OF TASKS.
+    'fonts-mover', 'icons-mover', 'images-mover', 'meta-mover', 'svg-mover-images')); // MAIN LAUNCHER OF TASKS.
