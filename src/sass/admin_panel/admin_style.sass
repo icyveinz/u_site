@@ -51,3 +51,37 @@ html
   font-size: 2vw
   font-family: bluecurve-light
   margin-top: 1%
+
+.enter-button
+  margin-top: 1%
+
+.orders-vertical-grid-container
+  display: grid
+  grid-template-columns: repeat(1, 1fr)
+  grid-template-rows: repeat(auto-fill, 1fr)
+
+.single-order-grid-container
+  display: grid
+  grid-template-columns: repeat(10, 1fr)
+  grid-template-rows: repeat(4, 1fr)
+  &__id
+    display: flex
+    grid-column: 2 / 3
+    grid-row: 1 / 1
+    justify-content: center
+  &__request-status
+    display: flex
+    justify-content: center
+    align-self: center
+    grid-column: 3 / 5
+    grid-row: 1 / 1
+
+.order-text-samples
+  &__id
+    font-size: 3vw
+  &__status
+    font-size: 2vw
+
+.buttons-request-status-container
+  display: flex
+  justify-content: center

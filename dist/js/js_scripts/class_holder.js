@@ -12,11 +12,23 @@ class CardBuilder {
     }
 
     release_vector() {
+        function release_formed_alt(taste_name) { // Releases formatted alt attribute
+            const separated_name = taste_name.split(' ')[2];
+            const classic = `UGOBAR 1500 ${separated_name}`;
+            const separated = `UGO BAR 1500 ${separated_name}`;
+            const third = `UGOBAR ${separated_name}`;
+            const forth = `UGO BAR ${separated_name}`
+            return `${classic} ${separated} ${third} ${forth}`
+        }
+
+
         let released = [];
+
+
         this.storage.forEach(function(object, index) {
             released.push(`<div class="single-product-grid-layout">
             <div class="single-product-grid-layout__presentation">
-                <img class="full-size-image" src=${object.photo} alt=""/>
+                <img class="full-size-image" src=${object.photo} alt="${release_formed_alt(object.name)}"/>
             </div>
             <div class="single-product-grid-layout__colored-naming">
                 <span class=${object.classname}>

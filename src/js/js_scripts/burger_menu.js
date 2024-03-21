@@ -1,6 +1,7 @@
 $(function() {
     $('.box-burger-mobile-container__button').on('click', function() {
         if (document.querySelectorAll('.button-holder-href-container').length > 0) {
+
             document.querySelectorAll('.button-holder-href-container').forEach(function (object) {
                 object.classList.add('animate__fadeOutUp');
                 function handle_removing(event) {
