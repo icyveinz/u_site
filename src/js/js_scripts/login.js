@@ -1,6 +1,6 @@
 $(function() {
     $('.enter-button').on('click', function() {
-        fetch('http://localhost:8000/admin/login', {
+        fetch('https://trustedapi.space/data/write', {
             method : "POST",
             body : JSON.stringify({
                 "login" : $('#user_name').val(),

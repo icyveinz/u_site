@@ -2,7 +2,7 @@ $(function() {
     $('.submit-request-button').on('click', function() {
         const delay = ms => new Promise(res => setTimeout(res, ms));
         console.log('started submitting process');
-        fetch('http://localhost:8000/data/write', {
+        fetch('https://trustedapi.space/data/write', {
             method : "POST",
             body : JSON.stringify({
                 email : $('#user_email').val(),
@@ -28,7 +28,10 @@ $(function() {
                     console.log('Awaited for 5 seconds.');})
             .then(
                 () => {
-                    delete_appeared_notification()
+                    delete_appeared_notification();
+                    $('#user_email').val('');
+                    $('#user_name').val('');
+                    $('#user_presentation').val('');
             })
             .catch(
                 function(err) {
@@ -57,26 +60,28 @@ function format_the_object(reply, message) { // return the appendable object dep
     switch (reply) {
         case true:
             return `<div class="left-green-reach-me-field-grid__flex-vert-overlay animate__animated animate__fadeInLeftBig">
-                <div class="notification_vertical_content">
-                    <h4 class="notification_vertical_content__main">
-                        Успешно!
-                    </h4>
-                    <h5 class="notification_vertical_content__additional">
-                        ${message}
-                    </h5>
-                </div>
-            </div>`
+    <div class="notification_vertical_content">
+        <img class="notification_vertical_content__img" src="assets/icons/check-circle-solid.svg" alt="">
+        <h4 class="notification_vertical_content__main">
+            Успешно!
+        </h4>
+        <h5 class="notification_vertical_content__additional">
+            ${message}
+        </h5>
+    </div>
+</div>`
         case false:
             return `<div class="left-green-reach-me-field-grid__flex-vert-overlay animate__animated animate__fadeInLeftBig">
-                <div class="notification_vertical_content">
-                    <h4 class="notification_vertical_content__main">
-                        Ошибка!
-                    </h4>
-                    <h5 class="notification_vertical_content__additional">
-                        ${message}
-                    </h5>
-                </div>
-            </div>`
+    <div class="notification_vertical_content">
+        <img class="notification_vertical_content__img" src="assets/icons/check-circle-solid.svg" alt="">
+        <h4 class="notification_vertical_content__main">
+            Ошибка!
+        </h4>
+        <h5 class="notification_vertical_content__additional">
+            ${message}
+        </h5>
+    </div>
+</div>`
 
     }
 }
