@@ -73,7 +73,7 @@ function format_the_object(reply, message) { // return the appendable object dep
         case false:
             return `<div class="left-green-reach-me-field-grid__flex-vert-overlay animate__animated animate__fadeInLeftBig">
     <div class="notification_vertical_content">
-        <img class="notification_vertical_content__img" src="assets/icons/check-circle-solid.svg" alt="">
+        <img class="notification_vertical_content__img" src="assets/icons/circle-xmark-solid.svg" alt="">
         <h4 class="notification_vertical_content__main">
             Ошибка!
         </h4>
