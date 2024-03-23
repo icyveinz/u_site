@@ -412,6 +412,24 @@ body
     font-family: bluecurve-regular
     font-size: 2vw
 
+.logo-link-holder
+  display: flex
+  flex-direction: row
+  align-items: center
+  &__img
+    width: 50%
+    height: auto
+    filter: brightness(0) saturate(100%) invert(55%) sepia(6%) saturate(19%) hue-rotate(339deg) brightness(100%) contrast(85%)
+    transition: 0.5s ease-in-out
+  &__a
+    color: $text_inactive
+    font-size: 4vw
+    font-family: bluecurve-regular
+    text-decoration: none
+    filter: brightness(0) saturate(100%) invert(55%) sepia(6%) saturate(19%) hue-rotate(339deg) brightness(100%) contrast(85%)
+    transition: 0.5s ease-in-out
+
+
 .legal-content-holder-vertical-layout
   display: flex
   flex-direction: column
@@ -439,6 +457,9 @@ body
   .menu-size-image
     width: 65% // stock 30%
     height: auto
+  .logo-link-holder
+    &__img
+      width: 10%
   #top-page-mobile
     display: flex
   #top-page
