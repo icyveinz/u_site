@@ -81,7 +81,12 @@ gulp.task('svg-mover-images', function() { // move and compress svg from images 
         .pipe(gulp.dest('dist/assets/images'))
 });
 
+gulp.task('favicon-mover', function() { // move favicon icons to the dist.
+    return gulp.src('src/*.+(png|ico|webmanifest)')
+        .pipe(gulp.dest('dist'))
+})
+
 
 gulp.task('default', gulp.parallel('serve', 'styles', 'checker',
     'html-minimizer', 'plugins-mover', 'scripts-mover', 'js-library-mover',
-    'fonts-mover', 'icons-mover', 'images-mover', 'meta-mover', 'svg-mover-images')); // MAIN LAUNCHER OF TASKS.
+    'fonts-mover', 'icons-mover', 'images-mover', 'meta-mover', 'svg-mover-images', 'favicon-mover')); // MAIN LAUNCHER OF TASKS.
