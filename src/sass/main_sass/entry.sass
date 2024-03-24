@@ -19,6 +19,98 @@ body
   grid-template-columns: repeat(5, 1fr)
   grid-template-rows: repeat(5, 1fr)
 
+.warning-mobile-container
+  display: flex
+  width: 100%
+  flex-direction: column
+  align-items: center
+
+.warning-mobile-body-container
+  margin-top: 35%
+  display: flex
+  flex-direction: column
+  width: 95%
+  align-items: center
+  background-color: $main_white
+  border-radius: 5px
+
+.title-announcement-flex
+  margin-top: 2.5%
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  width: 95%
+  &__text
+    font-size: 6vw
+    color: $main_black
+    font-family: bebas
+
+
+.law-announcement-flex
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  width: 95%
+  &__text
+    font-size: 3.5vw
+    color: $main_black
+    font-family: bluecurve-light
+
+.list-type-styler-flex
+  margin: 1% 0
+  display: flex
+  width: 100%
+  flex-direction: column
+  padding-left: 4%
+  &__li
+    font-size: 3vw
+    color: $main_black
+    font-family: bluecurve-light
+
+.description-announcement-flex
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  width: 95%
+
+.buttons-holder-flex
+  display: flex
+  flex-direction: row
+  justify-content: flex-end
+  width: 95%
+  margin-bottom: 1%
+  &__button-enter
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    padding: 1% 0
+    width: 30%
+    margin-right: 1%
+    border: 0
+    background-color: #5bb75b
+    border-radius: 5px
+    cursor: pointer
+  &__button-enter-text
+    font-family: bluecurve-regular
+    color: $main_white
+    font-size: 4vw
+  &__button-leave
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    width: 30%
+    padding: 1% 0
+    border: 0
+    background-color: $inactive_red
+    border-radius: 5px
+    cursor: pointer
+  &__button-leave-text
+    font-family: bluecurve-regular
+    color: $main_white
+    font-size: 4vw
+
 .placed-warning-container
   padding: 1% 0
   grid-column: 2 / 5
@@ -57,7 +149,7 @@ body
   justify-content: flex-start
 
 .list-type-styler
-  list-style-type: circle
+  list-style-type: disc
   padding-left: 2.5%
   &__li
     font-size: 1.5vw
@@ -102,10 +194,13 @@ body
     font-size: 1.4vw
 
 @media (max-width: 750px)
-  .list-type-styler
-    margin: 0
-  .buttons-holder-container
-    &__button-enter
-      border-radius: 3px
-    &__button-leave
-      border-radius: 3px
+  .warning-mobile-container
+    display: flex
+  .warning-grid-container
+    display: none
+
+@media (min-width: 750px)
+  .warning-mobile-container
+    display: none
+  .warning-grid-container
+    display: grid
