@@ -1,5 +1,5 @@
 $(function() {
-    $('.box-burger-mobile-container__button').on('click', function() {
+    $('.menu-size-image').on('click', function() {
         if (document.querySelectorAll('.button-holder-href-container').length > 0) {
 
             document.querySelectorAll('.button-holder-href-container').forEach(function (object) {
