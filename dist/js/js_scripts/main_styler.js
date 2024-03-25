@@ -13,8 +13,8 @@ function opposite_photo_src(photo_case, source) {
     }
 }
 
-function release_animated_text(index) {
-    const animation = "animate__fadeInRight"
+function release_animated_text(index) { // Text for photo slider
+    const animation = "animate__fadeInDown"
     switch (index) {
         case 1:
             return [
@@ -29,7 +29,7 @@ function release_animated_text(index) {
     }
 }
 
-function link_hover_trackers() {
+function link_hover_trackers() { // Activator of animations for information in footer
     $('.logo-link-holder').on('mouseenter', function() {
         console.log("Hovered link");
         $(this).find('#telegram-icon').css("filter", "brightness(0) saturate(100%) invert(57%) sepia(68%) saturate(688%) hue-rotate(167deg) brightness(92%) contrast(90%)");
