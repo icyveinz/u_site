@@ -1,40 +1,41 @@
 $(function() {
-    $('.menu-size-image').on('click', function() {
-        if (document.querySelectorAll('.button-holder-href-container').length > 0) {
+    const hamb = document.querySelector("#hamb");
+    const popup = document.querySelector("#popup");
+    const body = document.body;
 
-            document.querySelectorAll('.button-holder-href-container').forEach(function (object) {
-                object.classList.add('animate__fadeOutUp');
-                function handle_removing(event) {
-                    event.stopPropagation();
-                    object.remove();
-                }
-                object.addEventListener('animationend', handle_removing, {once : true});
-            })
-        }
-        else {
-            return_button_objects().forEach(function (object) {
-                $('.mobile-menu-grid-container').append(object);
-            });
-        }
+// Клонируем меню, чтобы задать свои стили для мобильной версии
+    const menu = document.querySelector("#menu").cloneNode(1);
+
+// При клике на иконку hamb вызываем ф-ию hambHandler
+    hamb.addEventListener("click", hambHandler);
+
+// Выполняем действия при клике ..
+    function hambHandler(e) {
+        e.preventDefault();
+        // Переключаем стили элементов при клике
+        popup.classList.toggle("open");
+        hamb.classList.toggle("active");
+        body.classList.toggle("noscroll");
+        renderPopup();
+    }
+
+// Здесь мы рендерим элементы в наш попап
+    function renderPopup() {
+        popup.appendChild(menu);
+    }
+
+// Код для закрытия меню при нажатии на ссылку
+    const links = Array.from(menu.children);
+
+// Для каждого элемента меню при клике вызываем ф-ию
+    links.forEach((link) => {
+        link.addEventListener("click", closeOnClick);
     });
-})
 
-function return_button_objects() {
-    return [
-        `<div class="button-holder-href-container animate__animated animate__backInLeft">
-                    <a class="button-holder-href-container__a" href="#production-anchor">
-                        Продукция
-                    </a>
-                </div>`,
-        `<div class="button-holder-href-container animate__animated animate__backInLeft">
-                    <a class="button-holder-href-container__a" href="#principles-anchor">
-                        Принципы
-                    </a>
-                </div>`,
-        `<div class="button-holder-href-container animate__animated animate__backInLeft">
-                    <a class="button-holder-href-container__a" href="#contacts-anchor">
-                        Контакты
-                    </a>
-                </div>`
-    ]
-}
+// Закрытие попапа при клике на меню
+    function closeOnClick() {
+        popup.classList.remove("open");
+        hamb.classList.remove("active");
+        body.classList.remove("noscroll");
+    }
+})

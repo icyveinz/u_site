@@ -145,7 +145,7 @@ html
   display: flex
   justify-content: center
   padding: 20px 0
-  font-size: 20px
+  font-size: 6vw
   font-weight: bold
   color: #3f3f3f
 
@@ -179,12 +179,42 @@ body.noscroll
   width: 50%
   height: auto
 
+.tg-link-holder-grid
+  display: grid
+  grid-template-columns: repeat(1, 1fr)
+  grid-template-rows: repeat(3, 1fr)
+  &__flex
+    grid-column: 1 / 1
+    grid-row: 2 / 2
+    display: flex
+    justify-content: center
+    align-items: center
+
+.logo-link-holder-flex
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  &__img
+    width: 25%
+    height: auto
+    filter: brightness(0) saturate(100%) invert(57%) sepia(68%) saturate(688%) hue-rotate(167deg) brightness(92%) contrast(90%)
+  &__a
+    color: #000000
+    font-size: 6vw
+    font-family: bluecurve-regular
+    text-decoration: none
+    filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(343deg) brightness(96%) contrast(102%)
+
 
 @media (max-width: 350px)
   .bar
     width: 20px
     height: 2px
     margin: 4px auto
+  .popup
+    top: 65px
   .hamb__field.active .bar:nth-child(1)
     transform: translateY(5.6px) rotate(45deg)
   .hamb__field.active .bar:nth-child(3)
@@ -195,6 +225,8 @@ body.noscroll
     width: 15px
     height: 1.5px
     margin: 2px auto
+  .popup
+    top: 50px
   .hamb__field.active .bar:nth-child(1)
     transform: translateY(3.5px) rotate(45deg)
   .hamb__field.active .bar:nth-child(3)
