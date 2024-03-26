@@ -14,7 +14,7 @@ function opposite_photo_src(photo_case, source) {
 }
 
 function release_animated_text(index) { // Text for photo slider
-    const animation = "animate__fadeInDown"
+    const animation = "animate__fadeInDown";
     switch (index) {
         case 1:
             return [
