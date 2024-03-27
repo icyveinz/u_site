@@ -4,7 +4,8 @@ const sass = require('gulp-sass')(require('sass')); // A plugin for working with
 const cleanCSS = require('gulp-clean-css'); // code compressor
 const htmlmin = require('gulp-htmlmin'); // import html minifier
 const imagemin = require('gulp-imagemin'); // import photo minifier STRICTLY USE : npm install gulp-imagemin@7.1.0 (IT ALLOWS TO REQUIRE IMPORT)
-const svgmin = require("gulp-svgmin") // svg files compressor
+const svgmin = require("gulp-svgmin"); // .svg files compressor
+const minify = require('gulp-minify'); // .js files compressor
 
 gulp.task('serve', function() {
     browserSync.init({
@@ -84,9 +85,30 @@ gulp.task('svg-mover-images', function() { // move and compress svg from images 
 gulp.task('favicon-mover', function() { // move favicon icons to the dist.
     return gulp.src('src/*.+(png|ico|webmanifest)')
         .pipe(gulp.dest('dist'))
-})
+});
 
+// A function which compresses the JS and moves to the dist folder
+gulp.task('js-compressor', function() {
+    return gulp
+        .src('src/js/js_scripts/*.js')
+        .pipe(minify())
+        .pipe(gulp.dest('dist/js/js_scripts'))
+});
 
-gulp.task('default', gulp.parallel('serve', 'styles', 'checker',
-    'html-minimizer', 'plugins-mover', 'scripts-mover', 'js-library-mover',
-    'fonts-mover', 'icons-mover', 'images-mover', 'meta-mover', 'svg-mover-images', 'favicon-mover')); // MAIN LAUNCHER OF TASKS.
+// MAIN LAUNCHER OF TASKS.
+gulp.task('default', gulp.parallel(
+    'serve',
+    'styles',
+    'checker',
+    'html-minimizer',
+    'plugins-mover',
+    'scripts-mover',
+    'js-library-mover',
+    'fonts-mover',
+    'icons-mover',
+    'images-mover',
+    'meta-mover',
+    'svg-mover-images',
+    'favicon-mover',
+    'js-compressor'
+));

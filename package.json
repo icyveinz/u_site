@@ -16,10 +16,15 @@
     "gulp-cli": "^2.3.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
+    "gulp-minify": "^3.1.0",
     "gulp-sass": "^5.1.0",
     "gulp-svgmin": "^4.1.0",
+    "gulp-terser": "^2.1.0",
     "gulp-uglify": "^3.0.2",
     "mozjpeg": "^8.0.0",
     "sass": "^1.71.1"
+  },
+  "dependencies": {
+    "readable-stream": "^4.5.2"
   }
 }
