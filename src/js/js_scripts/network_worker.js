@@ -28,10 +28,15 @@ $(function() {
                     console.log('Awaited for 5 seconds.');})
             .then(
                 () => {
-                    delete_appeared_notification();
-                    $('#user_email').val('');
-                    $('#user_name').val('');
-                    $('#user_presentation').val('');
+                    if (clear_or_not()) {
+                        delete_appeared_notification();
+                        $('#user_email').val('');
+                        $('#user_name').val('');
+                        $('#user_presentation').val('');
+                    }
+                    else {
+                        delete_appeared_notification();
+                    }
             })
             .catch(
                 function(err) {
@@ -40,7 +45,14 @@ $(function() {
     })
 })
 
-function display_notification(reply, message, main_actor) {
+function clear_or_not() { // -> Bool || Decides if input fields should be cleared or not
+    if ($('.notification_vertical_content__main').text().trim() === "Успешно!") {
+        return true
+    }
+    return false
+}
+
+function display_notification(reply, message, main_actor) { // Display an animated pop-up with notification.
     const pushable_object = format_the_object(reply, message);
     console.log(pushable_object);
     main_actor.parent().parent().append(pushable_object);
