@@ -44,7 +44,7 @@ class CardBuilder {
                 <span class="description-row__inactive">Аромат: ${object.taste}</span>
                 <span class="description-row__inactive">До 1500 затяжек</span>
                 <span class="description-row__inactive">Объём жидкости: 3 мл</span>
-                <span class="description-row__inactive">Содержание никотина: 19мг/см<sup>3</sup></span>
+                <span class="description-row__inactive">Содержание никотина: 19мг/мл</span>
                 <span class="description-row__inactive">Емкость аккумулятора: 550 мАч</span>
             </div>
         </div>`);
