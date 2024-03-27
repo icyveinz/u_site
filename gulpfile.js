@@ -88,6 +88,7 @@ gulp.task('favicon-mover', function() { // move favicon icons to the dist.
 });
 
 // A function which compresses the JS and moves to the dist folder
+// Solve and prevent creating duplicates in dist !!!
 gulp.task('js-compressor', function() {
     return gulp
         .src('src/js/js_scripts/*.js')

@@ -38,4 +38,9 @@ $(function() {
         hamb.classList.remove("active");
         body.classList.remove("noscroll");
     }
+
+    // If div container is clicked - redirect to the tg page.
+    $('.logo-link-holder-flex').on('click', function() {
+        window.location.href = "https://t.me/ugo_bar";
+    });
 })
