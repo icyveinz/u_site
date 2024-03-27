@@ -262,7 +262,12 @@
         </div>
     </footer>
 <script>
+    $(document.body).css({
+        "height": "100%",
+        "overflow-y": "hidden"
+    })
     $(document).ready(function() {
+        $(document.body).css("overflow-y", "auto")
         $('.preloader-overlay, .preloader-main').fadeOut();
     })
 </script>
