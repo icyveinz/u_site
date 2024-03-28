@@ -65,6 +65,13 @@ body
   @include full-width-image
   transition: all 1s ease-in-out
 
+.full-size-image-slide
+  @include full-width-image
+  transition: all 1s ease-in-out
+  border-radius: 0 30px 30px 0
+
+
+
 .menu-size-image
   width: 30%
   height: auto
@@ -241,16 +248,15 @@ body
     @include disable-marking
     display: flex
     color: $main_black
-    font-size: 3.5vw
-    line-height: 0.95
+    font-size: 6vw
     font-family: bebas
   &__comments
     @include disable-marking
     display: flex
     color: $main_black
-    font-size: 2.3vw
+    font-size: 2vw
     line-height: 0.95
-    font-family: bluecurve-light
+    font-family: ubuntu
 
 .contacts-double-separated-grid
   display: grid
@@ -476,9 +482,9 @@ body
 @media (max-width: 750px)
   .card-holder // Change text size next slides
     &__main-title
-      font-size: 5.5vw
+      font-size: 6vw
     &__comments
-      font-size: 3.3vw
+      font-size: 2.5vw
   .logo-and-name-holder
     &__img
       width: 70% // stock 30%
