@@ -18,23 +18,23 @@ function release_animated_text(index) { // -> String || Text for photo slider
     switch (index) {
         case 1:
             return [
-                `<span class="card-holder__main-title animate__animated ${animation}">Насыщенные и яркие вкусы</span>`,
-                `<span class="card-holder__comments animate__animated ${animation}">Жидкости, разработанные одной из ведущих лабораторий, которая широко известна своей палитрой оригинальных вкусов, представленной в крупнейшей продуктовой сети США – Seven/Eleven</span>`
+                `<span class="card-holder__main-title animate__animated ${animation}">Яркие вкусы</span>`,
+                `<span class="card-holder__comments animate__animated ${animation}">Жидкости, разработанные одной из&nbsp;ведущих лабораторий, которая широко известна своей палитрой оригинальных вкусов, представленной в&nbsp;крупнейшей продуктовой сети США&nbsp;&mdash; Seven/Eleven.</span>`
             ]
         case 2:
             return [
             `<span class="card-holder__main-title animate__animated ${animation}">Надежность и качество</span>`,
-            `<span class="card-holder__comments animate__animated ${animation}">Современное и технологичное производство, расположенное в Шэньчжэне, Китай, с полностью автоматизированной сборочной линией</span>`
+            `<span class="card-holder__comments animate__animated ${animation}">Современное и&nbsp;технологичное производство, расположенное в&nbsp;Шэньчжэне, Китай, с&nbsp;полностью автоматизированной сборочной линией.</span>`
             ]
         case 3:
             return [
                 `<span class="card-holder__main-title animate__animated ${animation}">100% Легально</span>`,
-                `<span class="card-holder__comments animate__animated ${animation}">Полное соответствие ГОСТ, Акциз 2024, Маркировка в системе «Честный Знак», Реализация только по ЭДО</span>`
+                `<span class="card-holder__comments animate__animated ${animation}">Полное соответствие ГОСТ, Акциз 2024, Маркировка в&nbsp;системе &laquo;Честный Знак&raquo;, Реализация только по&nbsp;ЭДО.</span>`
             ]
         case 4:
             return [
                 `<span class="card-holder__main-title animate__animated ${animation}">Всегда в срок</span>`,
-                `<span class="card-holder__comments animate__animated ${animation}">Оперативные и надежные логистические цепочки, позволяющие обеспечить бесперебойные поставки любого объема</span>`
+                `<span class="card-holder__comments animate__animated ${animation}">Оперативные и&nbsp;надежные логистические цепочки, позволяющие обеспечить бесперебойные поставки любого объема.</span>`
             ]
     }
 }
