@@ -13,18 +13,28 @@ function opposite_photo_src(photo_case, source) {
     }
 }
 
-function release_animated_text(index) { // Text for photo slider
+function release_animated_text(index) { // -> String || Text for photo slider
     const animation = "animate__fadeInDown";
     switch (index) {
         case 1:
             return [
-                `<span class="card-holder__main-title animate__animated ${animation}">качество</span>`,
-                `<span class="card-holder__comments animate__animated ${animation}">Полностью автоматизированная линия производства</span>`
+                `<span class="card-holder__main-title animate__animated ${animation}">Насыщенные и яркие вкусы</span>`,
+                `<span class="card-holder__comments animate__animated ${animation}">Жидкости, разработанные одной из ведущих лабораторий, которая широко известна своей палитрой оригинальных вкусов, представленной в крупнейшей продуктовой сети США – Seven/Eleven</span>`
             ]
         case 2:
             return [
-                `<span class="card-holder__main-title animate__animated ${animation}">статус</span>`,
-                `<span class="card-holder__comments animate__animated ${animation}">Вкусы разработаны и созданы в лабораториях по индивидуальному заказу.</span>`
+            `<span class="card-holder__main-title animate__animated ${animation}">Надежность и качество</span>`,
+            `<span class="card-holder__comments animate__animated ${animation}">Современное и технологичное производство, расположенное в Шэньчжэне, Китай, с полностью автоматизированной сборочной линией</span>`
+            ]
+        case 3:
+            return [
+                `<span class="card-holder__main-title animate__animated ${animation}">100% Легально</span>`,
+                `<span class="card-holder__comments animate__animated ${animation}">Полное соответствие ГОСТ, Акциз 2024, Маркировка в системе «Честный Знак», Реализация только по ЭДО</span>`
+            ]
+        case 4:
+            return [
+                `<span class="card-holder__main-title animate__animated ${animation}">Всегда в срок</span>`,
+                `<span class="card-holder__comments animate__animated ${animation}">Оперативные и надежные логистические цепочки, позволяющие обеспечить бесперебойные поставки любого объема</span>`
             ]
     }
 }
@@ -49,7 +59,7 @@ function link_hover_trackers() { // Activator of animations for information in f
     });
 }
 
-function ugo_black_exclusion(source_value) {
+function ugo_black_exclusion(source_value) { // -> bool || If image is ugo_black -> no converting
     if (source_value === 'assets/images/ugo_black%20copy.webp' || source_value === 'assets/images/ugo_black%20copy%202.webp') {
         return true
     }
@@ -101,6 +111,18 @@ function track_slides() { // Track slides in the carousel
             case "2":
                 $('.principles-grid-layout__text-holder').empty();
                 release_animated_text(2).forEach(function(object) {
+                    $('.principles-grid-layout__text-holder').append(object)
+                })
+                break;
+            case "3":
+                $('.principles-grid-layout__text-holder').empty();
+                release_animated_text(3).forEach(function(object) {
+                    $('.principles-grid-layout__text-holder').append(object)
+                })
+                break;
+            case "4":
+                $('.principles-grid-layout__text-holder').empty();
+                release_animated_text(4).forEach(function(object) {
                     $('.principles-grid-layout__text-holder').append(object)
                 })
                 break;
