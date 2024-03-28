@@ -60,7 +60,7 @@ function link_hover_trackers() { // Activator of animations for information in f
 }
 
 function ugo_black_exclusion(source_value) { // -> bool || If image is ugo_black -> no converting
-    if (source_value === 'assets/images/ugo_black%20copy.webp' || source_value === 'assets/images/ugo_black%20copy%202.webp') {
+    if (source_value === '../assets/images/ugo_black%20copy.webp' || source_value === '../assets/images/ugo_black%20copy%202.webp') {
         return true
     }
     return false

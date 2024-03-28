@@ -35,6 +35,12 @@ gulp.task('html-minimizer', function() { // minimize the html files
         .pipe(gulp.dest('dist'))
 });
 
+gulp.task('html-minimizer-directories', function() {
+    return gulp.src('src/**/*.html')
+        .pipe(htmlmin({collapseWhitespace : true}))
+        .pipe(gulp.dest('dist'))
+})
+
 // gulp.task('animation-plugin-mover', function() { // move the animate.css library inside the dist.
 //     return gulp.src("src/css/animate.css").pipe(gulp.dest('dist/css'))
 // })
@@ -102,6 +108,7 @@ gulp.task('default', gulp.parallel(
     'styles',
     'checker',
     'html-minimizer',
+    'html-minimizer-directories',
     'plugins-mover',
     'scripts-mover',
     'js-library-mover',
