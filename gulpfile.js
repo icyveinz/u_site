@@ -102,6 +102,12 @@ gulp.task('js-compressor', function() {
         .pipe(gulp.dest('dist/js/js_scripts'))
 });
 
+gulp.task('sitemap-mover', function() {
+    return gulp
+        .src('src/*.xml')
+        .pipe(gulp.dest('dist'))
+});
+
 // MAIN LAUNCHER OF TASKS.
 gulp.task('default', gulp.parallel(
     'serve',
@@ -118,5 +124,6 @@ gulp.task('default', gulp.parallel(
     'meta-mover',
     'svg-mover-images',
     'favicon-mover',
-    'js-compressor'
+    'js-compressor',
+    'sitemap-mover'
 ));
