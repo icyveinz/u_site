@@ -1,4 +1,4 @@
-@import "../passive_sass/presentation/fonts_colors", "../passive_sass/presentation/margins", "../passive_sass/presentation/mixins", "../passive_sass/presentation/underline_animation", "../passive_sass/presentation/up-navigator", "../passive_sass/presentation/burger_menu", "../passive_sass/presentation/burger-menu-mobile", "preloader"
+@import "../passive_sass/fonts_colors", "../passive_sass/margins", "../passive_sass/mixins", "../passive_sass/underline_animation", "../passive_sass/up-navigator", "../passive_sass/burger_menu", "../passive_sass/burger-menu-mobile", "preloader"
 
 html body
   margin: 0
@@ -26,6 +26,9 @@ body
 
 .sized-layout-container
   width: 90%
+  &__max-restricted
+    width: 90%
+    max-width: 1400px
 
 .logo-and-name-holder
   grid-column: 1 / 1
