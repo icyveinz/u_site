@@ -147,6 +147,10 @@ body
   grid-template-rows: repeat(3, 1fr)
   border: 1px solid $main_black
   transition: all .4s ease-in-out
+  &:hover
+    & .full-size-image
+      transform: scale(1.1)
+      transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95)
   &__blacked-out
     padding: 2% 0
     display: grid
