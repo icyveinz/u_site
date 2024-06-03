@@ -1,3 +1,4 @@
+// Script for visuals at the entry page.
 $(function() {
     $('.buttons-holder-container__button-enter').on('click', function() {
         window.location.href = 'presentation'

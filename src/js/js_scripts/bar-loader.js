@@ -1,3 +1,4 @@
+// Script for animation of preloader at the site
 $(function() {
     $(document.body).css({
         "height": "100%",
