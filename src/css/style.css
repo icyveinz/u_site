@@ -68,3 +68,21 @@ ul {
     grid-row: 1 / 6;
     background-color: #FFFF00;
 }
+
+.card__colored-section-blue {
+    grid-column: 8 / 11;
+    grid-row: 1 / 6;
+    background-color: #4169E1;
+}
+
+.card__colored-section-green {
+    grid-column: 8 / 11;
+    grid-row: 1 / 6;
+    background-color: #40A260;
+}
+
+.card__colored-section-black {
+    grid-column: 8 / 11;
+    grid-row: 1 / 6;
+    background-color: #000000;
+}
