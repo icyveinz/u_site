@@ -34,7 +34,7 @@ ul {
 .card {
     position: sticky !important;
     top: 0;
-    padding-top: calc(var(--index) * var(--card-top-offset));
+    /*padding-top: calc(var(--index) * var(--card-top-offset));*/
 }
 
 .card__grid {
