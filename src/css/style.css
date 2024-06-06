@@ -23,6 +23,7 @@ ul {
 #cards {
     padding-bottom: calc(var(--numcards) * var(--card-top-offset)); /* Make place at bottom, as items will slide to that position*/
     margin-bottom: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
+    border-radius: 0 !important;
 }
 
 #card_1 {
@@ -44,6 +45,7 @@ ul {
 .card {
     position: sticky !important;
     top: 0;
+    border: 1px solid black !important;
     /*padding-top: calc(var(--index) * var(--card-top-offset));*/
 }
 
@@ -113,7 +115,6 @@ ul {
     grid-row: 1 / 11;
     background-color: #E1C16E;
 }
-
 
 @media (max-width: 700px) {
     .card__grid {
