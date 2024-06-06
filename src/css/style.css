@@ -33,24 +33,6 @@
     padding-top: calc(var(--index) * var(--card-top-offset));
 }
 
-/** DEBUG **/
-
-#debug {
-    position: fixed;
-    top: 1em;
-    left: 1em;
-}
-#debug::after {
-    content: " Show Debug";
-    margin-left: 1.5em;
-    color: white;
-    white-space: nowrap;
-}
-
-#debug:checked ~ main {
-    --outline-width: 1px;
-}
-
 
 /** PAGE STYLING **/
 
