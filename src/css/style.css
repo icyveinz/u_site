@@ -63,9 +63,16 @@ ul {
     width: 100%;
 }
 
+.card__text-align {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+}
+
 .card__text-section__h4 {
     font-family: bebas;
-    font-size: 4vw;
+    font-size: 5vw;
     color: black;
 }
 
