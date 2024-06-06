@@ -50,7 +50,7 @@ ul {
 .card__grid {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     height: 40em;
 }
 
@@ -61,6 +61,12 @@ ul {
     flex-direction: column;
     align-items: center;
     width: 100%;
+}
+
+.card__brackets-container {
+    display: flex;
+    grid-column: 9 / 10;
+    grid-row: 2 / 2;
 }
 
 .card__text-align {
@@ -84,25 +90,25 @@ ul {
 
 .card__colored-section {
     grid-column: 8 / 11;
-    grid-row: 1 / 6;
+    grid-row: 3 / 7;
     background-color: #FFFF00;
 }
 
 .card__colored-section-blue {
     grid-column: 8 / 11;
-    grid-row: 1 / 6;
+    grid-row: 3 / 7;
     background-color: #4169E1;
 }
 
 .card__colored-section-green {
     grid-column: 8 / 11;
-    grid-row: 1 / 6;
+    grid-row: 3 / 7;
     background-color: #40A260;
 }
 
 .card__colored-section-black {
     grid-column: 8 / 11;
-    grid-row: 1 / 6;
+    grid-row: 3 / 7;
     background-color: #000000;
 }
 
