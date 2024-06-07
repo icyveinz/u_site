@@ -46,7 +46,9 @@ gulp.task('html-minimizer-directories', function() {
 // })
 
 gulp.task('plugins-mover', function() { // Move all CSS plugins to the dist.
-    return gulp.src("src/css/*.css").pipe(gulp.dest('dist/css'))
+    return gulp.src("src/css/*.css")
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(gulp.dest('dist/css'))
 })
 
 gulp.task('scripts-mover', function() { // move js files.
