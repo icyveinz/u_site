@@ -25,6 +25,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/main_sass/preloader.css">
     <link rel="stylesheet" href="../css/animate.css">
     <link rel="stylesheet" href="../css/aos.css">
@@ -177,30 +178,80 @@
         </div>
 
         <div class="full-width-container">
-            <div class="principles-grid-layout">
-                <div class="principles-grid-layout__image-holder">
-                    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" id="1">
-                                <img src="../assets/images/bottles.jpg" class="d-block w-100 full-size-image-slide" alt="">
+            <ul id="cards">
+                <li class="card" id="card_1">
+                    <div class="card__grid">
+                        <section class="card__text-section">
+                            <div class="card__text-align">
+                                <h4 class="card__text-section__h4">Яркие вкусы</h4>
                             </div>
-                            <div class="carousel-item" id="2">
-                                <img src="../assets/images/creation.jpg" class="d-block w-100 full-size-image-slide" alt="">
+                            <div class="card__text-align">
+                                <p class="card__text-section__p">
+                                    Жидкости разработанные одной из&nbsp;ведущих лабораторий, которая широко известна своей палитрой оригинальных вкусов и&nbsp;представлена в&nbsp;крупнейшей продуктовой сети США Seven/Eleven
+                                </p>
                             </div>
-                            <div class="carousel-item" id="3">
-                                <img src="../assets/images/mark.jpg" class="d-block w-100 full-size-image-slide" alt="">
-                            </div>
-                            <div class="carousel-item" id="4">
-                                <img src="../assets/images/transport.jpg" class="d-block w-100 full-size-image-slide" alt="">
-                            </div>
+                        </section>
+                        <div class="card__colored-section"></div>
+                        <div class="card__brackets-container">
+                            <h4 class="card__text-section__h4">(01)</h4>
                         </div>
                     </div>
-                </div>
-                <div class="principles-grid-layout__text-holder">
-                    <h3 class="card-holder__main-title">Яркие вкусы</h3>
-                    <h4 class="card-holder__comments">Жидкости разработанные одной из&nbsp;ведущих лабораторий, которая широко известна своей палитрой оригинальных вкусов и представлена в&nbsp;крупнейшей продуктовой сети США&nbsp;&mdash; Seven/Eleven.</h4>
-                </div>
-            </div>
+                </li>
+                <li class="card" id="card_2">
+                    <div class="card__grid">
+                        <section class="card__text-section">
+                            <div class="card__text-align">
+                                <h4 class="card__text-section__h4">Качество</h4>
+                            </div>
+                            <div class="card__text-align">
+                                <p class="card__text-section__p">
+                                    Полностью автоматизированная сборочная линия расположенная в&nbsp;Шеньчжене гарантирует минимальное количество брака.
+                                </p>
+                            </div>
+                        </section>
+                        <div class="card__colored-section-blue"></div>
+                        <div class="card__brackets-container">
+                            <h4 class="card__text-section__h4">(02)</h4>
+                        </div>
+                    </div>
+                </li>
+                <li class="card" id="card_3">
+                    <div class="card__grid">
+                        <section class="card__text-section">
+                            <div class="card__text-align">
+                                <h4 class="card__text-section__h4">Легальность</h4>
+                            </div>
+                            <div class="card__text-align">
+                                <p class="card__text-section__p">
+                                    Полное соответствие ГОСТ, Акциз 2024, Маркировка в&nbsp;системе &laquo;Честный Знак&raquo;, Реализация по&nbsp;ЭДО.
+                                </p>
+                            </div>
+                        </section>
+                        <div class="card__colored-section-green"></div>
+                        <div class="card__brackets-container">
+                            <h4 class="card__text-section__h4">(03)</h4>
+                        </div>
+                    </div>
+                </li>
+                <li class="card" id="card_4">
+                    <div class="card__grid">
+                        <section class="card__text-section">
+                            <div class="card__text-align">
+                                <h4 class="card__text-section__h4">Всегда в&nbsp;срок</h4>
+                            </div>
+                            <div class="card__text-align">
+                                <p class="card__text-section__p">
+                                    Оперативные и&nbsp;надежные логистические цепочки, которые позволяют обеспечить поставки любого объема.
+                                </p>
+                            </div>
+                        </section>
+                        <div class="card__colored-section-black"></div>
+                        <div class="card__brackets-container">
+                            <h4 class="card__text-section__h4">(04)</h4>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
 
         <div class="full-width-container" id="contacts-anchor">
