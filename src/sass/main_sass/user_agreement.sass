@@ -10,6 +10,14 @@
   align-items: flex-start
   margin-top: 3%
 
+.sized-layout-container-flex-centered
+  display: flex
+  width: 90%
+  flex-direction: column
+  align-items: center
+  margin-top: 5%
+  margin-bottom: 5%
+
 .user-agreement-text
   &__header
     font-size: 4vw
@@ -33,6 +41,27 @@
   margin-top: 2%
   &:last-child
     margin-bottom: 2%
+
+
+
+.return-to-main-button
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 45%
+  padding: 1.1% 0
+  background-color: #101727
+  border-radius: 10px
+  border: none
+  transition: 0.5s
+  &__inner-text
+    padding-top: 2%
+    font-family: bebas
+    font-size: 3.2vw
+    color: $main_white
+
+.return-to-main-button:hover
+  border-radius: 40px
 
 
 @media (max-width: 750px)
