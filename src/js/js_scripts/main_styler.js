@@ -35,7 +35,6 @@ function ugo_black_exclusion(source_value) { // -> bool || If image is ugo_black
 
 function track_hovers() {
     $('.products-grid-layout').on('mouseenter', '.single-product-grid-layout', function() {
-        console.log('hover');
         $(this).css("background-color", "black");
         if (ugo_black_exclusion($(this).find('.full-size-image').attr('src'))) {
             $(this).find('.ugo-naming__black').css('color', 'white')
@@ -45,7 +44,6 @@ function track_hovers() {
     });
 
     $('.products-grid-layout').on('mouseleave', '.single-product-grid-layout', function() {
-        console.log('unhover');
         $(this).css("background-color", "white");
         if (ugo_black_exclusion($(this).find('.full-size-image').attr('src'))) {
             $(this).find('.ugo-naming__black').css('color', 'black')

@@ -17,15 +17,13 @@ $(function() {
                 (response) => response.json())
             .then(
                 (json) => {
-                    console.log('test');
-                    console.log(json.is_succeed, json.message);
                     const reply = json.is_succeed;
                     const message = json.message
                     display_notification(reply, message, $(this));})
             .then(
                 async () => {
                     await delay(5000);
-                    console.log('Awaited for 5 seconds.');})
+                })
             .then(
                 () => {
                     if (clear_or_not()) {
@@ -54,7 +52,6 @@ function clear_or_not() { // -> Bool || Decides if input fields should be cleare
 
 function display_notification(reply, message, main_actor) { // Display an animated pop-up with notification.
     const pushable_object = format_the_object(reply, message);
-    console.log(pushable_object);
     main_actor.parent().parent().append(pushable_object);
 }
 
