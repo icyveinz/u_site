@@ -11,7 +11,7 @@ gulp.task('serve', function() {
     browserSync.init({
         server: {baseDir: 'dist'} // set the base directory at dist dir
     });
-
+    gulp.watch("src/**/*.html").on('change', browserSync.reload)
     gulp.watch("src/*.html").on('change', browserSync.reload); // Track changes in src html files, if changed - reload the browser.
 });
 
