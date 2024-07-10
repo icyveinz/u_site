@@ -60,39 +60,7 @@ function place_items() { // Place items in the grid.
     });
 }
 
-function track_slides() { // Track slides in the carousel
-    $('#carouselExample').on('slide.bs.carousel', function on_slide(ev) {
-        switch (ev.relatedTarget.id) {
-            case "1":
-                $('.principles-grid-layout__text-holder').empty();
-                release_animated_text(1).forEach(function(object) {
-                    $('.principles-grid-layout__text-holder').append(object)
-                });
-                break;
-            case "2":
-                $('.principles-grid-layout__text-holder').empty();
-                release_animated_text(2).forEach(function(object) {
-                    $('.principles-grid-layout__text-holder').append(object)
-                })
-                break;
-            case "3":
-                $('.principles-grid-layout__text-holder').empty();
-                release_animated_text(3).forEach(function(object) {
-                    $('.principles-grid-layout__text-holder').append(object)
-                })
-                break;
-            case "4":
-                $('.principles-grid-layout__text-holder').empty();
-                release_animated_text(4).forEach(function(object) {
-                    $('.principles-grid-layout__text-holder').append(object)
-                })
-                break;
-        }
-    })
-}
-
 $(function() {
     place_items();
-    track_slides();
     track_hovers();
 })
