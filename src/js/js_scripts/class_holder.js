@@ -26,7 +26,7 @@ class CardBuilder {
 
 
         this.storage.forEach(function(object, index) {
-            released.push(`<div class="single-product-grid-layout">
+            released.push(`<div class="single-product-grid-layout" data-aos="zoom-in-down">
             <div class="single-product-grid-layout__presentation">
                 <img class="full-size-image" src=${object.photo} alt="${release_formed_alt(object.name)}"/>
             </div>
