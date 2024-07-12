@@ -1,31 +1,3 @@
-
-
-function release_animated_text(index) { // -> String || Text for photo slider
-    const animation = "animate__fadeInDown";
-    switch (index) {
-        case 1:
-            return [
-                `<span class="card-holder__main-title animate__animated ${animation}">Яркие вкусы</span>`,
-                `<span class="card-holder__comments animate__animated ${animation}">Жидкости разработанные одной из&nbsp;ведущих лабораторий, которая широко известна своей палитрой оригинальных вкусов и представлена в&nbsp;крупнейшей продуктовой сети США&nbsp;&mdash; Seven/Eleven.</span>`
-            ]
-        case 2:
-            return [
-            `<span class="card-holder__main-title animate__animated ${animation}">Качество</span>`,
-            `<span class="card-holder__comments animate__animated ${animation}">Современное и&nbsp;технологичное производство, расположенное в&nbsp;Шэньчжэне. С&nbsp;полностью автоматизированной сборочной линией.</span>`
-            ]
-        case 3:
-            return [
-                `<span class="card-holder__main-title animate__animated ${animation}">Легальность</span>`,
-                `<span class="card-holder__comments animate__animated ${animation}">Полное соответствие ГОСТ, Акциз 2024, Маркировка в&nbsp;системе &laquo;Честный Знак&raquo;, Реализация по&nbsp;ЭДО.</span>`
-            ]
-        case 4:
-            return [
-                `<span class="card-holder__main-title animate__animated ${animation}">Всегда в срок</span>`,
-                `<span class="card-holder__comments animate__animated ${animation}">Оперативные и&nbsp;надежные логистические цепочки, которые позволяют обеспечить поставки любого объема.</span>`
-            ]
-    }
-}
-
 function ugo_black_exclusion(source_value) { // -> bool || If image is ugo_black -> no converting
     if (source_value === '../assets/images/black_web.svg') {
         return true
