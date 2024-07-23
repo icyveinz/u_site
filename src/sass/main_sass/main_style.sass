@@ -68,6 +68,16 @@ body
   @include full-width-image
   transition: all 1s ease-in-out
 
+.poster-holder-container__left > .full-size-image
+  @include full-width-image
+  transition: all 1s ease-in-out
+  border-radius: 15px
+
+.poster-holder-container__right > .full-size-image
+  @include full-width-image
+  transition: all 1s ease-in-out
+  border-radius: 15px
+
 .full-size-image-slide
   @include full-width-image
   transition: all 1s ease-in-out
@@ -510,6 +520,19 @@ body
   .legal-content-holder-vertical-layout__minors
     font-size: 80px
 
+@media (max-width: 999px)
+  .poster-holder-container__left > .full-size-image
+    border-radius: 10px
+
+  .poster-holder-container__right > .full-size-image
+    border-radius: 10px
+
+@media (max-width: 499px)
+  .poster-holder-container__left > .full-size-image
+    border-radius: 6px
+
+  .poster-holder-container__right > .full-size-image
+    border-radius: 6px
 
 @media (max-width: 750px)
   .card-holder // Change text size next slides
