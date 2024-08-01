@@ -55,3 +55,24 @@ document.addEventListener('DOMContentLoaded', () => {
 //             duration: 1
 //         });
 // });
+
+// Previous version
+// const refactored = gsap.timeline();
+// refactored
+//     .from('.user-agreement-text__header', {
+//         opacity: 0,
+//         yPercent: -15,
+//         duration: 1
+//     })
+//     .from('.user-agreement-text__paragraph', {
+//         opacity: 0,
+//         xPercent: -10,
+//         duration: 2,
+//         stagger: 0.1
+//     })
+//     .from('.user-agreement-text__information', {
+//         opacity: 0,
+//         xPercent: -10,
+//         duration: 1,
+//         stagger: 0.2
+//     });
