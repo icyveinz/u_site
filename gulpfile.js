@@ -27,6 +27,7 @@ gulp.task('styles', function() {
 gulp.task('checker', function() {
     gulp.watch('src/sass/**/*.+(sass|scss|css)', gulp.parallel('styles')); // ** we track all folders inside ; +(x|y|z) we track 3 file formats inside.
     gulp.watch("src/*.html").on('change', gulp.parallel('html-minimizer')); // on change of html in src we minimize it and place in dist
+    gulp.watch("src/**/*.html").on('change', gulp.parallel('html-minimizer'))
 });
 
 gulp.task('html-minimizer', function() { // minimize the html files
