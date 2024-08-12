@@ -1,5 +1,6 @@
 $(function() {
-    $('.right-green-reach-me-field-grid, .right-green-reach-me-field-grid__container, .right-green-reach-me-field-grid__container__header, .right-green-reach-me-field-grid__container__image, .right-green-reach-me-field-grid__container__llc-title').on({
+    const nodes = '.right-green-reach-me-field-grid, .right-green-reach-me-field-grid__container, .right-green-reach-me-field-grid__container__header, .right-green-reach-me-field-grid__container__image, .right-green-reach-me-field-grid__container__llc-title';
+    $(nodes).on({
         mouseenter : function() {
             $(this).css('cursor', 'pointer')
         },
@@ -7,6 +8,7 @@ $(function() {
             $(this).css('cursor', 'auto')
         }
     });
-    $('.right-green-reach-me-field-grid, .right-green-reach-me-field-grid__container, .right-green-reach-me-field-grid__container__header, .right-green-reach-me-field-grid__container__image, .right-green-reach-me-field-grid__container__llc-title').on('click')
+    $(nodes).on('click', function() {
+        window.location.replace('https://walgreenlogistics.ru/');
+    })
 })
-//
