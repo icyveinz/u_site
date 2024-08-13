@@ -9,6 +9,6 @@ $(function() {
         }
     });
     $(nodes).on('click', function() {
-        window.location.replace('https://walgreenlogistics.ru/');
+        window.open('https://walgreenlogistics.ru/', '_blank');
     })
 })
