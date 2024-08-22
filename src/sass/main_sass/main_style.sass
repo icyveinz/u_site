@@ -14,6 +14,62 @@ html
 body
   background-color: $main_white
 
+.age-verification-banner
+  position: fixed
+  left: 29%
+  top: 29%
+  width: 40%
+  display: flex
+  flex-direction: column
+  background-color: white
+  border-radius: 15px
+  border: 3px solid #000000
+  z-index: 4
+  &__title-container
+    margin-top: 5%
+    width: 100%
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    &__title
+      padding-top: 1.5%
+      font-size: 4vw
+      font-family: bebas
+  &__logo-container
+    display: flex
+    width: 100%
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    &__image
+      width: 30%
+      height: auto
+  &__button-container
+    display: flex
+    width: 100%
+    flex-direction: row
+    justify-content: space-around
+    margin: 5% 0
+    &__button-text
+      padding-top: 1.33%
+      font-size: 4vw
+      font-family: bebas
+    &__button
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      width: 40%
+      background-color: #FFFFFF
+      border: 3px solid #000000
+      transition: all 0.7s ease-in-out
+
+
+.age-verification-banner__button-container__button:hover
+  cursor: pointer
+  border-radius: 0 30px 0 30px
+
 .full-width-container
   width: 100%
   display: flex
