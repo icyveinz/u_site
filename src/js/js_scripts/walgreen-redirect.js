@@ -1,5 +1,5 @@
 $(function() {
-    const nodes = '.right-green-reach-me-field-grid, .right-green-reach-me-field-grid__container, .right-green-reach-me-field-grid__container__header, .right-green-reach-me-field-grid__container__image, .right-green-reach-me-field-grid__container__llc-title';
+    const nodes = '.right-green-reach-me-field-grid';
     $(nodes).on({
         mouseenter : function() {
             $(this).css('cursor', 'pointer')
