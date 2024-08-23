@@ -28,7 +28,7 @@ const standalone_path = form_the_path(current_platform);
 const inner_directory = fs.readdirSync(standalone_path);
 console.log(`${inner_directory.length} file-s detected : \n${inner_directory}`);
 inner_directory.forEach((path) => {
-    if (!path.includes("bundled") || !path.includes("-min")) {
+    if (!path.includes("bundled")) {
         console.log(`${path} would be removed.`)
         fs.rmSync(form_path_for_removing(current_platform, standalone_path, path), {recursive: true})
     }

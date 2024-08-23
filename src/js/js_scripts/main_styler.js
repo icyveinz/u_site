@@ -1,4 +1,4 @@
-import release_vector from "./class_holder-min.js";
+import release_vector from "./class_holder.js";
 
 function ugo_black_exclusion(source_value) { // -> bool || If image is ugo_black -> no converting
     if (source_value === '../assets/images/black_web.svg') {

@@ -3,8 +3,8 @@ const path = require("path");
 module.exports = {
     entry: {
         main: [
+            "./src/js/js_scripts/bar-loader.js",
             "./src/js/js_scripts/age_verification_main.js",
-            "./src/js/js_scripts/class_holder.js",
             "./src/js/js_scripts/visual_activators.js",
             "./src/js/js_scripts/hovered-links-footer.js",
             "./src/js/js_scripts/network_worker.js",
@@ -13,6 +13,7 @@ module.exports = {
             "./src/js/js_scripts/walgreen-redirect.js"
         ],
         user_agreement: [
+            "./src/js/js_scripts/bar-loader.js",
             "./src/js/js_scripts/check_if_age_confirmed.js",
             "./src/js/js_scripts/visual_activators.js",
             "./src/js/js_scripts/hovered-links-footer.js",
