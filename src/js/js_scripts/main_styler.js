@@ -1,3 +1,5 @@
+import release_vector from "./class_holder-min.js";
+
 function ugo_black_exclusion(source_value) { // -> bool || If image is ugo_black -> no converting
     if (source_value === '../assets/images/black_web.svg') {
         return true
@@ -26,8 +28,7 @@ function track_hovers() {
 }
 
 function place_items() { // Place items in the grid.
-    const collected = new CardBuilder();
-    collected.release_vector().forEach(function(object) {
+    release_vector().forEach(function(object) {
         $('.products-grid-layout').append(object)
     });
 }
