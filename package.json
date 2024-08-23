@@ -22,7 +22,9 @@
     "gulp-terser": "^2.1.0",
     "gulp-uglify": "^3.0.2",
     "mozjpeg": "^8.0.0",
-    "sass": "^1.71.1"
+    "sass": "^1.71.1",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
     "readable-stream": "^4.5.2"
