@@ -22,28 +22,28 @@ function release_vector() {
     let released = [];
 
     storage.forEach(function(object, index) {
-        released.push(`<div class="single-product-grid-layout" data-aos="zoom-in-down">
+        released.push(`<section class="single-product-grid-layout" data-aos="zoom-in-down">
             <div class="single-product-grid-layout__presentation">
                 <img class="full-size-image" src=${object.photo} alt="${release_formed_alt(object.name)}"/>
             </div>
             <div class="single-product-grid-layout__colored-naming">
-                <span class=${object.classname}>
+                <p class=${object.classname}>
                     ${object.name}
-                </span>
+                </p>
             </div>
             <div class="single-product-grid-layout__num-brackets">
                 <span class="decorative-brackets__inactive">
                     (0${index + 1})
                 </span>
             </div>
-            <div class="single-product-grid-layout__vert-align">
-                <span class="description-row__inactive">Аромат: ${object.taste}</span>
-                <span class="description-row__inactive">До 1500 затяжек</span>
-                <span class="description-row__inactive">Объём жидкости: 3 мл</span>
-                <span class="description-row__inactive">Содержание никотина: 19мг/мл</span>
-                <span class="description-row__inactive">Емкость аккумулятора: 550 мАч</span>
-            </div>
-        </div>`);
+            <section class="single-product-grid-layout__vert-align">
+                <p class="description-row__inactive">Аромат: ${object.taste}</p>
+                <p class="description-row__inactive">До 1500 затяжек</p>
+                <p class="description-row__inactive">Объём жидкости: 3 мл</p>
+                <p class="description-row__inactive">Содержание никотина: 19мг/мл</p>
+                <p class="description-row__inactive">Емкость аккумулятора: 550 мАч</p>
+            </section>
+        </section>`);
     });
     released.push(`<div class="single-product-grid-layout__blacked-out">
             <div class="single-product-grid-layout__centered-soon-text">
