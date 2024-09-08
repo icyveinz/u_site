@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initSlidesAnimation();
 });
 
+
+// Animation for hashtag text
 function hashtagAnimation() {
 
     const separated_parts = document.querySelectorAll('.picture-text-grid__hashtag-contents__p');
@@ -13,64 +15,53 @@ function hashtagAnimation() {
         const text_part = SplitType.create(single_part).chars;
         console.log(text_part);
         if (index === 0) {
-            timeline
-                .from(text_part, {
-                    opacity: 0,
-                    duration: 0.8,
-                    yPercent: -30,
-                    stagger: 0.2
-                })
+            text_part.forEach((char_node, index) => {
+                if (index === 0) {
+                    timeline
+                        .from(char_node, {
+                            opacity: 0,
+                            xPercent: -30,
+                            duration: 1
+                        })
+                }
+                else {
+                    timeline
+                        .from(char_node, {
+                            opacity: 0,
+                            duration: 0.25,
+                            yPercent: -30
+                        })
+                }
+            })
         }
         else {
-            timeline
-                .from(text_part, {
-                    opacity: 0,
-                    duration: 0.5,
-                    xPercent: -50,
-                    stagger: 0.3
-                })
+            text_part.forEach((char_node, index) => {
+                if (index === 0) {
+                    timeline
+                        .from(char_node, {
+                            opacity: 0,
+                            duration: 1,
+                            xPercent: -50
+                        })
+                }
+                else {
+                    timeline
+                        .from(char_node, {
+                            opacity: 0,
+                            duration: 0.3,
+                            xPercent: -50
+                        })
+                }
+            })
+            // timeline
+            //     .from(text_part, {
+            //         opacity: 0,
+            //         duration: 0.5,
+            //         xPercent: -50,
+            //         stagger: 0.3
+            //     })
         }
     })
-
-    // text.chars.forEach((node) => {
-    //     console.log(node);
-    //     gsap
-    //         .from(node, {
-    //             duration: 2,
-    //             ease: "power1.in",
-    //             yPercent: -20,
-    //             stagger: 0.5
-    //         })
-    // });
-
-    // gsap
-    //     .from(text.chars, {
-    //         duration: 0.5,
-    //         opacity: 0,
-    //         yPercent: -20,
-    //         stagger: 0.3
-    //     })
-
-    // const nodes = document.querySelectorAll('.picture-text-grid__hashtag-contents__p');
-    // nodes.forEach((node, index) => {
-    //     if ((index += 1) % 2 !== 0) {
-    //         gsap.from(node, {
-    //             duration: 2,
-    //             text: "#wherever",
-    //             ease: "power1.in",
-    //             yPercent: -20,
-    //             rtl: true
-    //         });
-    //     } else {
-    //         gsap.from(node, {
-    //             duration: 2,
-    //             text: "UGO",
-    //             ease: "power1.in",
-    //             yPercent: -20,
-    //             rtl: true
-    //         });
-    //     }
-    // })
 }
 
 
