@@ -1,6 +1,6 @@
 $(function() {
     AOS.init(); // activates AOS for smooth scroll appearance
-    new WOW().init(); // activates wow for tracking when on screen
+    // new WOW().init(); // activates wow for tracking when on screen
     // $(window).scroll(function(){ // activate arrow for quick scroll to the top
     //     if ($(this).scrollTop() > 600) {
     //         $('.pageup-navigation').fadeIn();
