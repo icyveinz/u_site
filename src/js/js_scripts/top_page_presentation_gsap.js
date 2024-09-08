@@ -18,7 +18,7 @@ function hashtagAnimation() {
                     opacity: 0,
                     duration: 0.8,
                     yPercent: -30,
-                    stagger: 0.3
+                    stagger: 0.2
                 })
         }
         else {

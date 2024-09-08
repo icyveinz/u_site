@@ -21,7 +21,7 @@ function release_vector() {
 
     let released = [];
 
-    released.push(`<div class="single-product-grid-layout__blacked-out">
+    released.push(`<div class="single-product-grid-layout__blacked-out" data-aos="zoom-in-down">
                     <div class="single-product-grid-layout__blacked-out__container">
                         <span class="single-product-grid-layout__blacked-out__container__title">
                             Технические характеристики
