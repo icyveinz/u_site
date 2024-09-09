@@ -57,3 +57,36 @@
       line-height: 80%
       user-select: none
 
+
+@media (max-width: 750px)
+  #image-hashed
+    display: none
+  #middle-centered-hash
+    grid-row: 1 / 3
+    grid-column: none
+    margin: 15% 0
+  .picture-text-grid__text-left-oriented
+    grid-template-columns: none
+    grid-template-rows: repeat(2, 1fr)
+    &__text-container
+      grid-row: 2 / 3
+      grid-column: none
+    &__image-container
+      grid-row: 1 / 2
+      grid-column: none
+  .picture-text-grid__text-right-oriented
+    grid-template-columns: none
+    grid-template-rows: repeat(2, 1fr)
+    &__text-container
+      grid-row: 2 / 3
+      grid-column: none
+    &__image-container
+      grid-row: 1 / 2
+      grid-column: none
+  .picture-text-grid__hashtag-contents__p
+    font-size: 19vw
+  .picture-text-grid__text-contents
+    &__header
+      font-size: 7vw
+    &__listing
+      font-size: 4vw
