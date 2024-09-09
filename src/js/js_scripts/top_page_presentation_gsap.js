@@ -53,15 +53,8 @@ function hashtagAnimation() {
                         })
                 }
             })
-            // timeline
-            //     .from(text_part, {
-            //         opacity: 0,
-            //         duration: 0.5,
-            //         xPercent: -50,
-            //         stagger: 0.3
-            //     })
         }
-    })
+    });
 }
 
 
