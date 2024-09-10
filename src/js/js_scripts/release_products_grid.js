@@ -10,13 +10,13 @@ function release_formed_alt(taste_name) { // Releases formatted alt attribute
 
 function release_vector() {
     const storage = [
-        {'name' : 'UGOBAR 1500 YELLOW', 'photo' : '../assets/images/yellow_web.svg', 'classname' : 'ugo-naming__yellow', 'taste' : 'Освежающее сплетение сладости и кислинки спелого манго, напоминающее тропический рай.'},
-        {'name' : 'UGOBAR 1500 GREEN', 'photo' : '../assets/images/green_web.svg', 'classname' : 'ugo-naming__green', 'taste' : 'Неимоверно освежающий и сочный арбуз, придающий ощущение прохлады даже в самый знойный день.'},
-        {'name' : 'UGOBAR 1500 BLACK', 'photo' : '../assets/images/black_web.svg', 'classname' : 'ugo-naming__black', 'taste' : 'Искристо-газированная кола с хрустящими кусочками льда, создающая неповторимый опыт удовольствия и освежения.'},
-        {'name' : 'UGOBAR 1500 PINK', 'photo' : '../assets/images/pink_web.svg', 'classname' : 'ugo-naming__pink', 'taste' : 'Яркий взрыв ягодного вкуса в лимонаде, омраченный специальной ноткой кислоты лимона, придающей ему особый шарм.'},
-        {'name' : 'UGOBAR 1500 BLUE', 'photo' : '../assets/images/blue_web.svg', 'classname' : 'ugo-naming__blue', 'taste' : 'Трогательное сочетание хрустящих голубики и ледяных капель, придающее прохладный и освежающий акцент.'},
-        {'name' : 'UGOBAR 1500 RED', 'photo' : '../assets/images/red_web.svg', 'classname' : 'ugo-naming__red', 'taste' : 'Легкое и сочное красное яблоко, напоминающее о летних прогулках в саду и пробуждающее нежные воспоминания.'},
-        {'name' : 'UGOBAR 1500 VIOLET', 'photo' : '../assets/images/violet_web.svg', 'classname' : 'ugo-naming__violet', 'taste' : 'Страстное соединение черники и сочной вишни, создающее волшебное звучание вкусов и приносящее неизгладимое удовлетворение.'}
+        {'name' : 'UGOBAR 1500 YELLOW', 'photo' : '../assets/images/yellow_web.svg', 'classname' : 'ugo-naming__yellow', 'taste' : 'Освежающее сплетение сладости и&nbsp;кислинки спелого манго, напоминающее тропический рай.'},
+        {'name' : 'UGOBAR 1500 GREEN', 'photo' : '../assets/images/green_web.svg', 'classname' : 'ugo-naming__green', 'taste' : 'Освежающий и&nbsp;сочный арбуз, придающий ощущение прохлады даже в&nbsp;самый знойный день.'},
+        {'name' : 'UGOBAR 1500 BLACK', 'photo' : '../assets/images/black_web.svg', 'classname' : 'ugo-naming__black', 'taste' : 'Искристо-газированная кола с&nbsp;хрустящими кусочками льда, создающая неповторимый опыт удовольствия и&nbsp;освежения.'},
+        {'name' : 'UGOBAR 1500 PINK', 'photo' : '../assets/images/pink_web.svg', 'classname' : 'ugo-naming__pink', 'taste' : 'Яркий взрыв ягодного вкуса в&nbsp;лимонаде, оттенённый специальной ноткой кислоты лимона, придающей ему особый шарм.'},
+        {'name' : 'UGOBAR 1500 BLUE', 'photo' : '../assets/images/blue_web.svg', 'classname' : 'ugo-naming__blue', 'taste' : 'Трогательное сочетание хрустящей голубики и&nbsp;ледяных капель, придающих прохладный и&nbsp;освежающий акцент.'},
+        {'name' : 'UGOBAR 1500 RED', 'photo' : '../assets/images/red_web.svg', 'classname' : 'ugo-naming__red', 'taste' : 'Легкое и&nbsp;сочное красное яблоко, напоминающее о&nbsp;летних прогулках в&nbsp;саду и&nbsp;пробуждающее нежные воспоминания.'},
+        {'name' : 'UGOBAR 1500 VIOLET', 'photo' : '../assets/images/violet_web.svg', 'classname' : 'ugo-naming__violet', 'taste' : 'Страстное соединение черники и&nbsp;сочной вишни, создающее волшебное звучание вкусов и&nbsp;приносящее неизгладимое удовлетворение.'}
     ];
 
     let released = [];
