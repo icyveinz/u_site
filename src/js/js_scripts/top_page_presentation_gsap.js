@@ -68,7 +68,7 @@ function initSlidesAnimation() {
                 start: 'top bottom-=20%',
                 scrub: true,
                 end: 'bottom bottom-=20%',
-                markers: true
+                //markers: true
             }
         })
     }
