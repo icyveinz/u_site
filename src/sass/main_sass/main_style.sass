@@ -6,7 +6,7 @@ html body
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, span, p
   margin-top: 0
-  margin-bottom: 0 !important
+  margin-bottom: 0
 
 html
   scroll-behavior: smooth
@@ -85,7 +85,6 @@ body
   display: flex
   justify-content: center
   &__black
-    padding-top: 1%
     width: 100%
     background-color: black
     display: flex
@@ -107,12 +106,6 @@ body
 
 .menu-buttons-holder
   &__production
-    grid-column: 4 / 4
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: center
-  &__principles
     grid-column: 6 / 6
     display: flex
     flex-direction: column
@@ -230,12 +223,33 @@ body
       transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95)
   &__blacked-out
     padding: 2% 0
-    display: grid
-    grid-template-columns: repeat(26, 1fr)
-    grid-template-rows: repeat(3, 1fr)
+    display: flex
+    flex-direction: column
+    align-items: center
     background-color: $main_black
     border: 1px solid $main_black
     transition: all .4s ease-in-out
+    &__container
+      margin-top: 3%
+      width: 80%
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      &__additional_info_container
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        margin-top: 6%
+      &__title
+        font-size: 2.7vw
+        font-family: bebas
+        color: $main_white
+      &__additional_info
+        font-size: 1.8vw
+        font-family: comfortaa-regular
+        color: $main_white
+
   &__presentation
     display: flex
     grid-column: 3 / 9
@@ -258,13 +272,6 @@ body
     flex-direction: column
     align-items: flex-start
     transition: all .3s ease-in-out
-  &__centered-soon-text
-    display: flex
-    grid-column: 7 / 23
-    grid-row: 2 / 2
-    flex-direction: row
-    justify-content: center
-    align-items: center
 
 .coming-soon-text
   @include disable-marking
@@ -310,8 +317,9 @@ body
 .description-row
   &__inactive
     color: $main_black
-    font-size: 1.55vw
-    font-family: bluecurve-light // If don't like change to Anonymous Pro
+    font-size: 1.7vw
+    font-family: comfortaa-regular // If don't like change to Anonymous Pro
+    margin-top: 5%
 
 .principles-grid-layout
   display: grid
@@ -374,13 +382,13 @@ body
       height: auto
       border-radius: 15px 15px 15px 15px
     &__llc-title
-      font-family: bluecurve-regular
+      font-family: comfortaa-regular
       color: #FFFFFF
-      font-size: 1.5vw
+      font-size: 1.4vw
       margin-top: 10%
     &__mail-to
       color: #FFFFFF
-      font-family: bluecurve-light
+      font-family: comfortaa-light
       text-decoration: none
       font-size: 1.3vw
 
@@ -426,7 +434,7 @@ body
     color: $main_white
     padding-left: 10%
   &__additional
-    font-family: bluecurve-light
+    font-family: comfortaa-regular
     grid-column: 1 / 6
     grid-row: 5 / 5
     font-size: 3vw
@@ -446,9 +454,10 @@ body
     color: $main_black
     line-height: 1.2
   &__under-title
-    font-family: bluecurve-light
-    font-size: 2vw
+    font-family: comfortaa-regular
+    font-size: 1.8vw
     color: $main_black
+    margin: 2% 0
   &__submit-text
     padding-top: 1%
     font-family: bebas
@@ -459,13 +468,14 @@ body
   width: 100%
 
 .label-input-styler
-  font-family: bluecurve-light
+  font-family: comfortaa-light
   color: black
-  font-size: 1.5vw
+  font-size: 1.3vw
   &__user-agreement
-    font-family: bluecurve-light
+    font-family: comfortaa-light
     color: black
-    font-size: 1.5vw
+    font-size: 1.3vw
+    margin-top: 1.5%
 
 ::placeholder
   color: black
@@ -482,6 +492,7 @@ body
   transition: 0.5s
   outline: none
   resize: none
+  margin-bottom: 2%
 
 .text-input-styler:focus
   border: 3px solid #000
@@ -663,8 +674,10 @@ body
     display: flex
   #top-page
     display: none
-  .single-product-grid-layout__blacked-out
-    display: none
+  .single-product-grid-layout__blacked-out__container__title
+    font-size: 6vw
+  .single-product-grid-layout__blacked-out__container__additional_info
+    font-size: 4.3vw
   .products-grid-layout
     grid-template-columns: repeat(1, 1fr)
   .ugo-naming
@@ -684,7 +697,7 @@ body
       @include ugo-colored-naming-mobile
   .decorative-brackets
     &__inactive
-      font-size: 4vw
+      font-size: 5vw
   .description-row
     &__inactive
       font-size: 3vw

@@ -10,7 +10,8 @@ module.exports = {
             "./src/js/js_scripts/network_worker.js",
             "./src/js/js_scripts/main_styler.js",
             "./src/js/js_scripts/burger_menu.js",
-            "./src/js/js_scripts/walgreen-redirect.js"
+            "./src/js/js_scripts/walgreen-redirect.js",
+            "./src/js/js_scripts/top_page_presentation_gsap.js"
         ],
         user_agreement: [
             "./src/js/js_scripts/bar-loader.js",
