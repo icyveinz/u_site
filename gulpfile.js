@@ -111,6 +111,12 @@ gulp.task('sitemap-mover', function() {
         .pipe(gulp.dest('dist'))
 });
 
+gulp.task('robots-mover', function () {
+    return gulp
+        .src('src/robots.txt')
+        .pipe(gulp.dest('dist'))
+})
+
 // MAIN LAUNCHER OF TASKS.
 gulp.task('default', gulp.parallel(
     'serve',
@@ -128,5 +134,6 @@ gulp.task('default', gulp.parallel(
     'svg-mover-images',
     'favicon-mover',
     'js-compressor',
-    'sitemap-mover'
+    'sitemap-mover',
+    'robots-mover'
 ));
