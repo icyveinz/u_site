@@ -1,0 +1,5 @@
+# Сгенерировано https://pr-cy.ru/
+
+Sitemap: https://ugo-vape.ru/sitemap.xml
+User-agent: *
+Allow: https://ugo-vape.ru/
