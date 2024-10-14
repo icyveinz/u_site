@@ -106,7 +106,6 @@ gulp.task('default', gulp.parallel(
     'html-minimizer',
     'html-minimizer-directories',
     'plugins-mover',
-    'scripts-mover',
     'js-library-mover',
     'fonts-mover',
     'icons-mover',
@@ -114,7 +113,6 @@ gulp.task('default', gulp.parallel(
     'meta-mover',
     'svg-mover-images',
     'favicon-mover',
-    'js-compressor',
     'sitemap-mover',
     'robots-mover'
 ));
