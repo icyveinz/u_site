@@ -1,6 +1,7 @@
 const path = require("path");
 
 module.exports = {
+    mode: "production",
     entry: {
         main: [
             "./src/js/js_scripts/bar-loader.js",
