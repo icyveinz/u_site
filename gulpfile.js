@@ -5,7 +5,6 @@ const cleanCSS = require('gulp-clean-css'); // code compressor
 const htmlmin = require('gulp-htmlmin'); // import html minifier
 const imagemin = require('gulp-imagemin'); // import photo minifier STRICTLY USE : npm install gulp-imagemin@7.1.0 (IT ALLOWS TO REQUIRE IMPORT)
 const svgmin = require("gulp-svgmin"); // .svg files compressor
-const minify = require('gulp-minify'); // .js files compressor
 
 gulp.task('serve', function() {
     browserSync.init({
@@ -40,21 +39,12 @@ gulp.task('html-minimizer-directories', function() {
     return gulp.src('src/**/*.html')
         .pipe(htmlmin({collapseWhitespace : true}))
         .pipe(gulp.dest('dist'))
-})
-
-// gulp.task('animation-plugin-mover', function() { // move the animate.css library inside the dist.
-//     return gulp.src("src/css/animate.css").pipe(gulp.dest('dist/css'))
-// })
+});
 
 gulp.task('plugins-mover', function() { // Move all CSS plugins to the dist.
     return gulp.src("src/css/*.css")
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest('dist/css'))
-})
-
-gulp.task('scripts-mover', function() { // move js files.
-    return gulp.src('src/js/js_scripts/*.js') // get the js files from src
-        .pipe(gulp.dest('dist/js/js_scripts'))
 });
 
 gulp.task('js-library-mover', function() { // move library js files.
@@ -94,15 +84,6 @@ gulp.task('svg-mover-images', function() { // move and compress svg from images 
 gulp.task('favicon-mover', function() { // move favicon icons to the dist.
     return gulp.src('src/*.+(png|ico|webmanifest)')
         .pipe(gulp.dest('dist'))
-});
-
-// A function which compresses the JS and moves to the dist folder
-// Solve and prevent creating duplicates in dist !!!
-gulp.task('js-compressor', function() {
-    return gulp
-        .src('src/js/js_scripts/*.js')
-        .pipe(minify())
-        .pipe(gulp.dest('dist/js/js_scripts'))
 });
 
 gulp.task('sitemap-mover', function() {
