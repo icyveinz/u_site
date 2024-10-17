@@ -21,7 +21,7 @@ function release_vector() {
 
     let released = [];
 
-    released.push(`<div class="single-product-grid-layout__blacked-out" data-aos="zoom-in-down">
+    released.push(`<article class="single-product-grid-layout__blacked-out" data-aos="zoom-in-down">
                     <div class="single-product-grid-layout__blacked-out__container">
                         <span class="single-product-grid-layout__blacked-out__container__title">
                             Технические характеристики
@@ -41,10 +41,10 @@ function release_vector() {
                             </span>
                         </div>
                     </div>
-                </div>`);
+                </article>`);
 
     storage.forEach(function(object, index) {
-        released.push(`<section class="single-product-grid-layout" data-aos="zoom-in-down">
+        released.push(`<article class="single-product-grid-layout" data-aos="zoom-in-down">
                     <div class="single-product-grid-layout__presentation">
                         <img class="full-size-image" src=${object.photo} alt="${release_formed_alt(object.name)}"/>
                     </div>
@@ -61,7 +61,7 @@ function release_vector() {
                     <section class="single-product-grid-layout__vert-align">
                         <p class="description-row__inactive">${object.taste}</p>
                     </section>
-                </section>`);
+                </article>`);
     });
     return released
 }
