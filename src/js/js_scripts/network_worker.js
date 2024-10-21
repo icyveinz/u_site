@@ -1,7 +1,6 @@
 $(function() {
     $('.submit-request-button').on('click', function() {
         const delay = ms => new Promise(res => setTimeout(res, ms));
-        console.log('started submitting process');
         fetch('https://trustedapi.space/data/write', {
             method : "POST",
             body : JSON.stringify({

@@ -13,7 +13,6 @@ function hashtagAnimation() {
 
     separated_parts.forEach((single_part, index) => {
         const text_part = SplitType.create(single_part).chars;
-        console.log(text_part);
         if (index === 0) {
             text_part.forEach((char_node, index) => {
                 if (index === 0) {
