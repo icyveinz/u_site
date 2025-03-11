@@ -1,7 +1,7 @@
 $(function() {
     $('.submit-request-button').on('click', function() {
         const delay = ms => new Promise(res => setTimeout(res, ms));
-        fetch('https://trustedapi.space/data/write', {
+        fetch('https://trustedapi.space/create/ugo/', {
             method : "POST",
             body : JSON.stringify({
                 email : $('#user_email').val(),
